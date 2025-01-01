@@ -46,8 +46,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -56,7 +60,7 @@
               "RelativeDocumentMoniker": "Japan_Server\\Program.cs",
               "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\Program.cs",
               "RelativeToolTip": "Japan_Server\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-15T17:52:41.812Z",
               "EditorCaption": ""
@@ -71,12 +75,7 @@
               "RelativeToolTip": "Japan_Server\\Components\\App.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-15T17:51:49.714Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "WhenOpened": "2026-11-15T17:51:49.714Z"
             },
             {
               "$type": "Document",
@@ -88,8 +87,7 @@
               "RelativeToolTip": "Japan_Server\\Services\\LocalStorageService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAowDEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T17:51:20.29Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-15T17:51:20.29Z"
             },
             {
               "$type": "Document",
@@ -101,8 +99,7 @@
               "RelativeToolTip": "Japan_Server\\Services\\IServices\\ILocalStorageService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T17:49:53.354Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-15T17:49:53.354Z"
             },
             {
               "$type": "Document",
@@ -114,8 +111,7 @@
               "RelativeToolTip": "Japan_Server\\wwwroot\\js\\jsinterop.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-11-15T17:46:38.285Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-15T17:46:38.285Z"
             },
             {
               "$type": "Document",
@@ -127,8 +123,7 @@
               "RelativeToolTip": "Japan_Server\\wwwroot\\style\\StyleProductModal.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-11-14T17:43:53.376Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-14T17:43:53.376Z"
             },
             {
               "$type": "Document",
@@ -140,8 +135,7 @@
               "RelativeToolTip": "Japan_Server\\Components\\Pages\\Product\\Product.razor",
               "ViewState": "AgIAACQAAAAAAAAAAAAAACgAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-14T17:28:55.159Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-14T17:28:55.159Z"
             },
             {
               "$type": "Document",
@@ -153,8 +147,7 @@
               "RelativeToolTip": "Japan_Server\\Components\\Pages\\Product\\ProductRequest.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-14T17:30:03.243Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-14T17:30:03.243Z"
             },
             {
               "$type": "Document",
@@ -166,8 +159,7 @@
               "RelativeToolTip": "Japan_Server\\Components\\Pages\\Product\\ProductModal.razor",
               "ViewState": "AgIAABUAAAAAAAAAAAAwwEQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-13T17:49:31.096Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-13T17:49:31.096Z"
             }
           ]
         }
