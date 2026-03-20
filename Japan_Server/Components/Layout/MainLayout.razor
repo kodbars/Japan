@@ -1,0 +1,58 @@
+﻿@inherits LayoutComponentBase
+
+<MudThemeProvider Theme="_theme" />
+<MudPopoverProvider />
+
+<MudDialogProvider />
+
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudAppBar Elevation="4">
+        <MudElement HtmlTag="a"
+                    Class="app-bar-link"
+                    href="https://github.com/MudBlazor/MudBlazor"
+                    target="blank"
+                    rel="noopener noreferrer">
+            GitHub
+        </MudElement>
+        
+        <MudElement HtmlTag="a"
+                    Class="app-bar-link"
+                    href="https://github.com/MudBlazor/MudBlazor"
+                    target="blank"
+                    rel="noopener noreferrer">
+            Документация
+        </MudElement>
+        <MudSpacer />
+    </MudAppBar>
+    <History />
+    <NavMenu/>
+    <MudMainContent>
+        @Body
+    </MudMainContent>
+</MudLayout>
+
+<div id="blazor-error-ui" data-nosnippet>
+    An unhandled error has occurred.
+    <a href="." class="reload">Reload</a>
+    <span class="dismiss">🗙</span>
+</div>
+
+@code {
+    private MudTheme _theme = new MudTheme()
+    {
+        PaletteLight = new PaletteLight()
+        {
+            Primary = Colors.Gray.Lighten5,
+            AppbarBackground = Colors.Gray.Lighten5,
+            AppbarText = "#000000"
+        },
+        LayoutProperties = new LayoutProperties()
+        {
+            AppbarHeight = "48px"
+        }
+        
+    };
+}
+

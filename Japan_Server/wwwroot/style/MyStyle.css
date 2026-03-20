@@ -1,0 +1,27 @@
+/* Ссылки в AppBar */
+.app-bar-link {
+    color: #000000 !important; /* ✅ Чёрный цвет текста */
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 24px !important;
+    transition: color 0.2s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+}
+
+    /* Эффект при наведении */
+    .app-bar-link:hover {
+        color: #ffab40 !important;
+        /* Альтернативы: 
+       color: #ffab40 !important;       /* Orange (как было)
+        color: #1976d2 !important; /* ✅ Синий при наведении (лучше сочетается с чёрным) 
+            color: #2e7d32 !important; /* Зелёный color: #c62828 !important; /* Красный
+        color: #2e7d32 !important; /* Зелёный
+        color: #c62828 !important; /* Красный */
+    }
+
+    /* Убираем отступ у последнего элемента */
+    .app-bar-link:last-child {
+        margin-right: 0 !important;
+    }

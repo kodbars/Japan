@@ -1,0 +1,56 @@
+﻿@inject IDialogService DialogService
+
+<MudItem>
+    <MudPaper Height="320px" Width="260px" Style="position: relative;">
+        
+        <!-- Кнопка Info в правом верхнем углу -->
+        <MudIconButton Icon="@Icons.Material.Filled.Info"
+                       @onclick="OpenDialogAsync"
+                       Variant="Variant.Filled"
+                       Style="position: absolute; top: 8px; right: 8px; z-index: 10;"
+                       Color="Color.Default"
+                       Size="Size.Small" />
+        
+        
+        <div Style="flex: 1; min-height: 0; position: relative;">
+            <MudImage Height="260" Width="260" Src="images/_2.png" Style="object-fit: cover;" />
+        </div>
+
+        <MudToolBar Style="height: 60px; justify-content: center; gap: 4px;">
+            <MudIconButton Icon="@Icons.Material.Outlined.Remove" Disabled="@Disabled" @onclick="MinusOnePosition" Size="Size.Small" />
+            <MudNumericField HideSpinButtons="true" @bind-Value="IntValue" Label="@AMOUNT" Variant="Variant.Text" Min="0" Style="width: 70px;" InputClass="text-center" />
+            <MudIconButton Icon="@Icons.Material.Outlined.Add" @onclick="PlusOnePosition" Size="Size.Small" />
+        </MudToolBar>
+    </MudPaper>
+</MudItem>
+
+@code {
+    private int IntValue { get; set; } = 0;
+    private const string AMOUNT = "Количество";
+    private bool Disabled = true;
+    private string ProductInfo = "Какойто текст о продукте";
+
+    private async Task PlusOnePosition()
+    {
+        IntValue++;
+        if (IntValue > 0)
+        {
+            Disabled = false;
+        }
+    }
+    private async Task MinusOnePosition()
+    {
+        IntValue--;
+        if (IntValue < 1)
+        {
+            Disabled = true;
+        }
+    }
+
+    private Task OpenDialogAsync()
+    {
+        var options = new DialogOptions { CloseOnEscapeKey = true };
+
+        return DialogService.ShowAsync<ProductInfo>("Simple Dialog", options);
+    }
+}
