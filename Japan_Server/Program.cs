@@ -1,5 +1,8 @@
 using Japan_Server.Components;
+using Microsoft.EntityFrameworkCore;
+using Models_DB_and_Request.Data;
 using MudBlazor.Services;
+using WebAPI.Services.ServicesExternalMenu.IServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +10,15 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 builder.Services.AddMudServices();
+builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped(sp =>
+{
+    return new HttpClient
+    {
+        BaseAddress = new Uri("https://localhost:7082/") // ← ваш порт WebAPI
+    };
+});
 
 var app = builder.Build();
 

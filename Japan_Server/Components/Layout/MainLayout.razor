@@ -1,5 +1,6 @@
 ﻿@inherits LayoutComponentBase
 
+
 <MudThemeProvider Theme="_theme" />
 <MudPopoverProvider />
 
@@ -8,29 +9,15 @@
 <MudSnackbarProvider />
 
 <MudLayout>
-    <MudAppBar Elevation="4">
-        <MudElement HtmlTag="a"
-                    Class="app-bar-link"
-                    href="https://github.com/MudBlazor/MudBlazor"
-                    target="blank"
-                    rel="noopener noreferrer">
-            GitHub
-        </MudElement>
-        
-        <MudElement HtmlTag="a"
-                    Class="app-bar-link"
-                    href="https://github.com/MudBlazor/MudBlazor"
-                    target="blank"
-                    rel="noopener noreferrer">
-            Документация
-        </MudElement>
-        <MudSpacer />
-    </MudAppBar>
-    <History />
-    <NavMenu/>
-    <MudMainContent>
+
+    <AppBar />
+    <UpperContainerLoyout />
+    
+    <MudMainContent Style="padding: 3px; margin: 0px; margin-bottom: 30px;">
         @Body
     </MudMainContent>
+
+    <LowerContainerLoyout />
 </MudLayout>
 
 <div id="blazor-error-ui" data-nosnippet>

@@ -1,3 +1,6 @@
 <Solution>
+  <Project Path="Japan_DB/Japan_DB.csproj" Id="ff3d05b1-7917-449c-bef4-0f8a2048d7bd" />
   <Project Path="Japan_Server/Japan_Server.csproj" />
+  <Project Path="Models/Models_DB_and_Request.csproj" Id="7bb51d42-fbe4-4d54-ad66-c9bef0feea9d" />
+  <Project Path="WebAPI/WebAPI.csproj" Id="3f60634c-89f3-4258-a72a-5790fdce4244" />
 </Solution>

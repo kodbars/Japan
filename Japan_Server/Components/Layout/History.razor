@@ -1,21 +1,25 @@
-﻿<MudCarousel Class="mud-width-full"
-             Style="height:200px;"
-             ShowArrows="true"
-             ShowBullets="true"
-             EnableSwipeGesture="true"
-             AutoCycle="true"
-             AutoCycleTime="@timeSpan"
-             TData="object">
-    @for (int i = 0; i < 3; i++)
-    {
-        <MudCarouselItem Transition="transition" Color="@Color.Primary">
-            <div class="d-flex" style="height:100%">
-                <MudImage Class="mx-auto my-auto" Src="images/_1.jpg" />
-            </div>
-        </MudCarouselItem>
+﻿<MudPaper Height="200px" Width="100%" Elevation="0">
+    <MudContainer>
+        <MudCarousel Class="mud-width-full"
+                     Style="height:200px;"
+                     ShowArrows="true"
+                     ShowBullets="true"
+                     EnableSwipeGesture="true"
+                     AutoCycle="true"
+                     AutoCycleTime="@timeSpan"
+                     TData="object">
+            @for (int i = 0; i < 3; i++)
+            {
+                <MudCarouselItem Transition="transition" Color="@Color.Primary">
+                    <div class="d-flex" style="height:100%">
+                        <MudImage Class="mx-auto my-auto" Src="images/_1.jpg" />
+                    </div>
+                </MudCarouselItem>
         
-    }
-</MudCarousel>
+            }
+        </MudCarousel>
+    </MudContainer>
+</MudPaper>
 
 @code {
     private Transition transition = Transition.Slide;

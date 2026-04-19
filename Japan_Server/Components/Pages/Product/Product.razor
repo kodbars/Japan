@@ -1,4 +1,6 @@
-﻿@inject IDialogService DialogService
+﻿@inject HttpClient Http
+@inject IDialogService DialogService
+@inject ILogger<Product> Logger
 
 <MudItem>
     <MudPaper Height="320px" Width="260px" Style="position: relative;">
@@ -13,13 +15,13 @@
         
         
         <div Style="flex: 1; min-height: 0; position: relative;">
-            <MudImage Height="260" Width="260" Src="images/_2.png" Style="object-fit: cover;" />
+            <MudImage Height="260" Width="260" Src="https://16a9564f-f8ec-42ba-a998-3027aa809e50.selstorage.ru/demobars/84414/images/items/cd393fabfd308b52ba4b1eb2170c9427.WEBP" Style="object-fit: cover;" />
         </div>
 
         <MudToolBar Style="height: 60px; justify-content: center; gap: 4px;">
-            <MudIconButton Icon="@Icons.Material.Outlined.Remove" Disabled="@Disabled" @onclick="MinusOnePosition" Size="Size.Small" />
+            <MudIconButton Icon="@Icons.Material.Outlined.Remove" Disabled="@Disabled" @onclick="MinusOnePositionAsync" Size="Size.Small" />
             <MudNumericField HideSpinButtons="true" @bind-Value="IntValue" Label="@AMOUNT" Variant="Variant.Text" Min="0" Style="width: 70px;" InputClass="text-center" />
-            <MudIconButton Icon="@Icons.Material.Outlined.Add" @onclick="PlusOnePosition" Size="Size.Small" />
+            <MudIconButton Icon="@Icons.Material.Outlined.Add" @onclick="PlusOnePositionAsync" Size="Size.Small" />
         </MudToolBar>
     </MudPaper>
 </MudItem>
@@ -28,9 +30,22 @@
     private int IntValue { get; set; } = 0;
     private const string AMOUNT = "Количество";
     private bool Disabled = true;
-    private string ProductInfo = "Какойто текст о продукте";
+    private string DialogText = "Какой-то текст о продукте";
 
-    private async Task PlusOnePosition()
+    private Task OpenDialogAsync()
+    {
+        var options = new DialogOptions { CloseOnEscapeKey = true };
+    
+        // Создаем параметры для диалога
+        var parameters = new DialogParameters
+    {
+        { nameof(ProductInfo.DialogContent), DialogText }
+    };
+    
+        return DialogService.ShowAsync<ProductInfo>("Simple Dialog", parameters, options);
+    }
+
+    private async Task PlusOnePositionAsync()
     {
         IntValue++;
         if (IntValue > 0)
@@ -38,7 +53,7 @@
             Disabled = false;
         }
     }
-    private async Task MinusOnePosition()
+    private async Task MinusOnePositionAsync()
     {
         IntValue--;
         if (IntValue < 1)
@@ -47,10 +62,4 @@
         }
     }
 
-    private Task OpenDialogAsync()
-    {
-        var options = new DialogOptions { CloseOnEscapeKey = true };
-
-        return DialogService.ShowAsync<ProductInfo>("Simple Dialog", options);
-    }
 }

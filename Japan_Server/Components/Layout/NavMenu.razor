@@ -1,7 +1,13 @@
-﻿<div class="d-flex justify-center">
-    <MudButtonGroup Color="Color.Primary" Variant="Variant.Filled">
-        <MudButton>One</MudButton>
-        <MudButton>Two</MudButton>
-        <MudButton>Three</MudButton>
+﻿<div class="d-flex justify-center" style="padding: 10px;">
+    <MudButtonGroup Variant="Variant.Filled">
+        @foreach (var item in Categories)
+        {
+            <MudButton>@item.name</MudButton>
+        }
     </MudButtonGroup>
 </div>
+
+@code {
+    [Parameter]
+    public List<ItemCategory>? Categories { get; set; }
+}

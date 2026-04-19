@@ -1,0 +1,34 @@
+﻿@inject NavigationManager _navigationManager
+
+<MudPaper Height="180px" Width="100%" Elevation="0" Class="banner-paper">
+    <MudContainer MaxWidth="MaxWidth.False" Fixed="true" Class="banner-container">
+        
+        <!-- 🔹 Изображение: прижато к низу -->
+        <MudImage Src="images/Japan.png"
+                  Height="115"
+                  @onclick="Home"
+                  Alt="Логотип"
+                  Class="rounded-lg ml-4 banner-image" />
+        
+        <!-- 🔹 Текстовый блок: центрирован по вертикали -->
+        <div Class="banner-text-wrapper">
+            <MudText Typo="Typo.body1" Class="banner-text-main">
+                Сеть №1 в России <br />
+                <MudElement Class="banner-text-highlight">
+                    по количеству ресторанов японской кухни
+                </MudElement>
+            </MudText>
+            <MudText Typo="Typo.caption" Class="banner-text-delivery">
+                Доставка 60 минут или подарим бесплатный ролл
+            </MudText>
+        </div>
+        
+    </MudContainer>
+</MudPaper>
+
+@code {
+    private async Task Home()
+    {
+        _navigationManager.NavigateTo("/");
+    }
+}

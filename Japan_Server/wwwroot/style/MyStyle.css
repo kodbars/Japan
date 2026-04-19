@@ -1,27 +1,91 @@
-/* Ссылки в AppBar */
-.app-bar-link {
-    color: #000000 !important; /* ✅ Чёрный цвет текста */
-    font-weight: bold;
-    text-decoration: none;
-    margin-right: 24px !important;
-    transition: color 0.2s ease-in-out;
-    display: inline-flex;
-    align-items: center;
-    height: 100%;
+/* Классы для компонента UpperContainerLoyout.razor */
+
+.banner-paper {
+    height: 180px !important;
+    width: 100% !important;
+    box-shadow: none !important;
 }
 
-    /* Эффект при наведении */
-    .app-bar-link:hover {
-        color: #ffab40 !important;
-        /* Альтернативы: 
-       color: #ffab40 !important;       /* Orange (как было)
-        color: #1976d2 !important; /* ✅ Синий при наведении (лучше сочетается с чёрным) 
-            color: #2e7d32 !important; /* Зелёный color: #c62828 !important; /* Красный
-        color: #2e7d32 !important; /* Зелёный
-        color: #c62828 !important; /* Красный */
+.banner-container {
+    height: 100% !important;
+    text-align: left !important;
+    display: flex !important;
+    align-items: stretch !important;
+    gap: 16px !important;
+    padding: 8px 16px 8px 0 !important;
+    margin-left: 0 !important;
+}
+
+.banner-image {
+    cursor: pointer !important;
+    object-fit: cover !important;
+    flex-shrink: 0 !important;
+    align-self: flex-end !important;
+}
+
+.banner-text-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 4px !important;
+    min-width: 0 !important;
+    text-align: left !important;
+    align-self: center !important;
+}
+
+.banner-text-main {
+    line-height: 1.2 !important;
+}
+
+.banner-text-highlight {
+    color: #d32f2f !important;
+    font-weight: 700 !important;
+}
+
+.banner-text-delivery {
+    line-height: 1.2 !important;
+}
+
+/* Класс для компонента LowerContainerLoyout.razor */
+
+.banner-paper-lower {
+    margin: 0 auto;
+    background-color: #2e2c2c !important;
+}
+
+/* Класс для компонента LowerContainerLoyout.razor, для текста MudLink для верхний части*/
+.footer-link-top {
+    font-size: 16px !important;
+    text-decoration: none !important;
+    color: #424242 !important; /* Исходный цвет (тёмно-серый) */
+    transition: color 0.2s ease; /* Плавная анимация */
+    display: block;
+    margin-bottom: 4px;
+}
+
+    /* Цвет при наведении */
+    .footer-link-top:hover {
+        color: #BDBDBD !important; /* Цвет при наведении */
+        cursor: pointer;
     }
 
-    /* Убираем отступ у последнего элемента */
-    .app-bar-link:last-child {
-        margin-right: 0 !important;
-    }
+/* Класс для компонента LowerContainerLoyout.razor, для текста MudText */
+.text-mudtext-lcl {
+    font-size: 20px !important;
+    color: #BDBDBD !important;
+}
+
+/* Класс для компонента LowerContainerLoyout.razor, для текста MudLink для нижней части*/
+.footer-link-down {
+    font-size: 14px !important;
+    text-decoration: none !important;
+    color: #424242 !important; /* Исходный цвет (тёмно-серый) */
+    transition: color 0.2s ease; /* Плавная анимация */
+    display: block;
+    margin-bottom: 4px;
+}
+
+    /* Цвет при наведении */
+    .footer-link-down:hover {
+        color: #BDBDBD !important; /* Цвет при наведении */
+        cursor: pointer;

@@ -1,0 +1,61 @@
+﻿@inject HttpClient Http
+@inject ILogger<Product> Logger
+
+
+<NavMenu Categories="@_externalMenu?.itemCategories" />
+
+<MudGrid Spacing="7" Justify="Justify.Center">
+    <Product />
+</MudGrid>
+
+
+@code {
+    private string DialogText = "Какой-то текст о продукте";
+    private Root? _externalMenu;
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadMenuAsync();
+    }
+
+    private async Task LoadMenuAsync()
+    {
+        StateHasChanged();
+
+        try
+        {
+            // 🎯 POST к вашему контроллеру
+            var response = await Http.PostAsJsonAsync("api/test/externalMenu", new { });
+            response.EnsureSuccessStatusCode();
+
+            using var responseStream = await response.Content.ReadAsStreamAsync();
+            var externalMenu = await System.Text.Json.JsonSerializer.DeserializeAsync<Root>(
+                responseStream,
+                new System.Text.Json.JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                });
+            if (externalMenu != null)
+            {
+                _externalMenu = externalMenu;
+                foreach (var row in externalMenu.itemCategories)
+                {
+                    foreach (var item in row.items)
+                    {
+                        if (item.sku.Equals("0104"))
+                        {
+                            DialogText = item.description;
+                        }
+                    }
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "Ошибка загрузки меню");
+        }
+        finally
+        {
+            StateHasChanged();
+        }
+    }
+}

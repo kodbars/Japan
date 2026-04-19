@@ -1,34 +1,66 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Program\\RepProjectJapan\\Japan\\",
+  "WorkspaceRootPath": "F:\\VS_Project\\Japan\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|d:\\program\\repprojectjapan\\japan\\japan_server\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FF3D05B1-7917-449C-BEF4-0F8A2048D7BD}|Japan_DB\\Japan_DB.csproj|f:\\vs_project\\japan\\japan_db\\repository\\citymenurepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF3D05B1-7917-449C-BEF4-0F8A2048D7BD}|Japan_DB\\Japan_DB.csproj|solutionrelative:japan_db\\repository\\citymenurepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|d:\\program\\repprojectjapan\\japan\\japan_server\\wwwroot\\style\\mystyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\wwwroot\\style\\mystyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{FF3D05B1-7917-449C-BEF4-0F8A2048D7BD}|Japan_DB\\Japan_DB.csproj|f:\\vs_project\\japan\\japan_db\\repository\\irepository\\icitymenurepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF3D05B1-7917-449C-BEF4-0F8A2048D7BD}|Japan_DB\\Japan_DB.csproj|solutionrelative:japan_db\\repository\\irepository\\icitymenurepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|d:\\program\\repprojectjapan\\japan\\japan_server\\components\\pages\\productinfo.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\components\\pages\\productinfo.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7BB51D42-FBE4-4D54-AD66-C9BEF0FEEA9D}|Models\\Models_DB_and_Request.csproj|f:\\vs_project\\japan\\models\\db\\citymenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BB51D42-FBE4-4D54-AD66-C9BEF0FEEA9D}|Models\\Models_DB_and_Request.csproj|solutionrelative:models\\db\\citymenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|d:\\program\\repprojectjapan\\japan\\japan_server\\components\\pages\\product.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\components\\pages\\product.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\VS_Project\\Japan\\Models\\Migrations\\20260419102336_AddTableDatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\Migrations\\20260419102336_AddTableDatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|d:\\program\\repprojectjapan\\japan\\japan_server\\components\\layout\\history.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\components\\layout\\history.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7BB51D42-FBE4-4D54-AD66-C9BEF0FEEA9D}|Models\\Models_DB_and_Request.csproj|f:\\vs_project\\japan\\models\\modelsrequest\\externalmenu\\itemcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BB51D42-FBE4-4D54-AD66-C9BEF0FEEA9D}|Models\\Models_DB_and_Request.csproj|solutionrelative:models\\modelsrequest\\externalmenu\\itemcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|d:\\program\\repprojectjapan\\japan\\japan_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BB51D42-FBE4-4D54-AD66-C9BEF0FEEA9D}|Models\\Models_DB_and_Request.csproj|f:\\vs_project\\japan\\models\\models_db_and_request.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7BB51D42-FBE4-4D54-AD66-C9BEF0FEEA9D}|Models\\Models_DB_and_Request.csproj|solutionrelative:models\\models_db_and_request.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|d:\\program\\repprojectjapan\\japan\\japan_server\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BB51D42-FBE4-4D54-AD66-C9BEF0FEEA9D}|Models\\Models_DB_and_Request.csproj|f:\\vs_project\\japan\\models\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BB51D42-FBE4-4D54-AD66-C9BEF0FEEA9D}|Models\\Models_DB_and_Request.csproj|solutionrelative:models\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F60634C-89F3-4258-A72A-5790FDCE4244}|WebAPI\\WebAPI.csproj|f:\\vs_project\\japan\\webapi\\services\\servicesexternalmenu\\externalmenuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F60634C-89F3-4258-A72A-5790FDCE4244}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\services\\servicesexternalmenu\\externalmenuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\components\\pages\\product\\productrequest.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\components\\pages\\product\\productrequest.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\components\\pages\\product\\product.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\components\\pages\\product\\product.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,91 +75,193 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainLayout.razor",
-              "DocumentMoniker": "D:\\Program\\RepProjectJapan\\Japan\\Japan_Server\\Components\\Layout\\MainLayout.razor",
-              "RelativeDocumentMoniker": "Japan_Server\\Components\\Layout\\MainLayout.razor",
-              "ToolTip": "D:\\Program\\RepProjectJapan\\Japan\\Japan_Server\\Components\\Layout\\MainLayout.razor*",
-              "RelativeToolTip": "Japan_Server\\Components\\Layout\\MainLayout.razor*",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAADAAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-19T11:11:09.037Z",
+              "Title": "CityMenuRepository.cs",
+              "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_DB\\Repository\\CityMenuRepository.cs",
+              "RelativeDocumentMoniker": "Japan_DB\\Repository\\CityMenuRepository.cs",
+              "ToolTip": "F:\\VS_Project\\Japan\\Japan_DB\\Repository\\CityMenuRepository.cs",
+              "RelativeToolTip": "Japan_DB\\Repository\\CityMenuRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T10:51:44.996Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MyStyle.css",
-              "DocumentMoniker": "D:\\Program\\RepProjectJapan\\Japan\\Japan_Server\\wwwroot\\style\\MyStyle.css",
-              "RelativeDocumentMoniker": "Japan_Server\\wwwroot\\style\\MyStyle.css",
-              "ToolTip": "D:\\Program\\RepProjectJapan\\Japan\\Japan_Server\\wwwroot\\style\\MyStyle.css",
-              "RelativeToolTip": "Japan_Server\\wwwroot\\style\\MyStyle.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-03-18T12:21:56.113Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProductInfo.razor",
-              "DocumentMoniker": "D:\\Program\\RepProjectJapan\\Japan\\Japan_Server\\Components\\Pages\\ProductInfo.razor",
-              "RelativeDocumentMoniker": "Japan_Server\\Components\\Pages\\ProductInfo.razor",
-              "ToolTip": "D:\\Program\\RepProjectJapan\\Japan\\Japan_Server\\Components\\Pages\\ProductInfo.razor",
-              "RelativeToolTip": "Japan_Server\\Components\\Pages\\ProductInfo.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-15T15:09:12.7Z",
+              "Title": "ICityMenuRepository.cs",
+              "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_DB\\Repository\\IRepository\\ICityMenuRepository.cs",
+              "RelativeDocumentMoniker": "Japan_DB\\Repository\\IRepository\\ICityMenuRepository.cs",
+              "ToolTip": "F:\\VS_Project\\Japan\\Japan_DB\\Repository\\IRepository\\ICityMenuRepository.cs",
+              "RelativeToolTip": "Japan_DB\\Repository\\IRepository\\ICityMenuRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T10:48:52.381Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Product.razor",
-              "DocumentMoniker": "D:\\Program\\RepProjectJapan\\Japan\\Japan_Server\\Components\\Pages\\Product.razor",
-              "RelativeDocumentMoniker": "Japan_Server\\Components\\Pages\\Product.razor",
-              "ToolTip": "D:\\Program\\RepProjectJapan\\Japan\\Japan_Server\\Components\\Pages\\Product.razor",
-              "RelativeToolTip": "Japan_Server\\Components\\Pages\\Product.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-15T14:40:48.093Z",
+              "Title": "20260419102336_AddTableDatabase.cs",
+              "DocumentMoniker": "F:\\VS_Project\\Japan\\Models\\Migrations\\20260419102336_AddTableDatabase.cs",
+              "RelativeDocumentMoniker": "Models\\Migrations\\20260419102336_AddTableDatabase.cs",
+              "ToolTip": "F:\\VS_Project\\Japan\\Models\\Migrations\\20260419102336_AddTableDatabase.cs",
+              "RelativeToolTip": "Models\\Migrations\\20260419102336_AddTableDatabase.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T10:23:36.207Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "History.razor",
-              "DocumentMoniker": "D:\\Program\\RepProjectJapan\\Japan\\Japan_Server\\Components\\Layout\\History.razor",
-              "RelativeDocumentMoniker": "Japan_Server\\Components\\Layout\\History.razor",
-              "ToolTip": "D:\\Program\\RepProjectJapan\\Japan\\Japan_Server\\Components\\Layout\\History.razor",
-              "RelativeToolTip": "Japan_Server\\Components\\Layout\\History.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-14T15:30:49.357Z",
+              "Title": "ItemCategory.cs",
+              "DocumentMoniker": "F:\\VS_Project\\Japan\\Models\\ModelsRequest\\ExternalMenu\\ItemCategory.cs",
+              "RelativeDocumentMoniker": "Models\\ModelsRequest\\ExternalMenu\\ItemCategory.cs",
+              "ToolTip": "F:\\VS_Project\\Japan\\Models\\ModelsRequest\\ExternalMenu\\ItemCategory.cs",
+              "RelativeToolTip": "Models\\ModelsRequest\\ExternalMenu\\ItemCategory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T10:21:26.355Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Program\\RepProjectJapan\\Japan\\Japan_Server\\Program.cs",
+              "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_Server\\Program.cs",
               "RelativeDocumentMoniker": "Japan_Server\\Program.cs",
-              "ToolTip": "D:\\Program\\RepProjectJapan\\Japan\\Japan_Server\\Program.cs",
+              "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\Program.cs",
               "RelativeToolTip": "Japan_Server\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAACNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-07T17:02:13.84Z"
+              "WhenOpened": "2026-04-19T10:19:06.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "F:\\VS_Project\\Japan\\Models\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Models\\Data\\AppDbContext.cs",
+              "ToolTip": "F:\\VS_Project\\Japan\\Models\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Models\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T07:35:14.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Models_DB_and_Request.csproj",
+              "DocumentMoniker": "F:\\VS_Project\\Japan\\Models\\Models_DB_and_Request.csproj",
+              "RelativeDocumentMoniker": "Models\\Models_DB_and_Request.csproj",
+              "ToolTip": "F:\\VS_Project\\Japan\\Models\\Models_DB_and_Request.csproj",
+              "RelativeToolTip": "Models\\Models_DB_and_Request.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-13T07:34:48.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_Server\\appsettings.json",
+              "RelativeDocumentMoniker": "Japan_Server\\appsettings.json",
+              "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\appsettings.json",
+              "RelativeToolTip": "Japan_Server\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-12T15:35:49.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CityMenu.cs",
+              "DocumentMoniker": "F:\\VS_Project\\Japan\\Models\\DB\\CityMenu.cs",
+              "RelativeDocumentMoniker": "Models\\DB\\CityMenu.cs",
+              "ToolTip": "F:\\VS_Project\\Japan\\Models\\DB\\CityMenu.cs",
+              "RelativeToolTip": "Models\\DB\\CityMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T15:34:11.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ExternalMenuService.cs",
+              "DocumentMoniker": "F:\\VS_Project\\Japan\\WebAPI\\Services\\ServicesExternalMenu\\ExternalMenuService.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Services\\ServicesExternalMenu\\ExternalMenuService.cs",
+              "ToolTip": "F:\\VS_Project\\Japan\\WebAPI\\Services\\ServicesExternalMenu\\ExternalMenuService.cs",
+              "RelativeToolTip": "WebAPI\\Services\\ServicesExternalMenu\\ExternalMenuService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T14:07:01.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Home.razor",
+              "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "Japan_Server\\Components\\Pages\\Home.razor",
+              "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "Japan_Server\\Components\\Pages\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-08T11:31:20.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "Japan_Server\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "Japan_Server\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-08T11:28:48.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ProductRequest.razor",
+              "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Pages\\Product\\ProductRequest.razor",
+              "RelativeDocumentMoniker": "Japan_Server\\Components\\Pages\\Product\\ProductRequest.razor",
+              "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Pages\\Product\\ProductRequest.razor",
+              "RelativeToolTip": "Japan_Server\\Components\\Pages\\Product\\ProductRequest.razor",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-08T11:23:50.041Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "_Imports.razor",
-              "DocumentMoniker": "D:\\Program\\RepProjectJapan\\Japan\\Japan_Server\\Components\\_Imports.razor",
+              "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\_Imports.razor",
               "RelativeDocumentMoniker": "Japan_Server\\Components\\_Imports.razor",
-              "ToolTip": "D:\\Program\\RepProjectJapan\\Japan\\Japan_Server\\Components\\_Imports.razor",
+              "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\_Imports.razor",
               "RelativeToolTip": "Japan_Server\\Components\\_Imports.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-07T16:53:54.485Z"
+              "WhenOpened": "2026-04-08T11:22:25.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Product.razor",
+              "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Pages\\Product\\Product.razor",
+              "RelativeDocumentMoniker": "Japan_Server\\Components\\Pages\\Product\\Product.razor",
+              "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Pages\\Product\\Product.razor",
+              "RelativeToolTip": "Japan_Server\\Components\\Pages\\Product\\Product.razor",
+              "ViewState": "AgIAAAwAAAAAAAAAAIBJwCAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-08T11:13:54.472Z"
             }
           ]
         }

@@ -1,0 +1,59 @@
+﻿<MudPaper Height="300px" Width="100%" Elevation="4" Class="banner-paper-lower">
+    <MudContainer Fixed="true">
+
+        <MudPaper Height="300px" Width="1200px" Elevation="0" Class="banner-paper-lower">
+            <MudContainer>
+                <MudGrid>
+
+                    <MudItem xs="12" sm="4">
+                        <MudText Class="text-mudtext-lcl"><b>Партнерам</b></MudText>
+                        <MudLink Href="#" Class="footer-link-top">Франшиза</MudLink>
+                        <MudLink Href="#" Class="footer-link-top">Инвестиции</MudLink>
+                        <MudLink Href="#" Class="footer-link-top">Поставщикам</MudLink>
+                        <MudLink Href="#" Class="footer-link-top">Предложить помещение</MudLink>
+                    </MudItem>
+                    <MudItem xs="12" sm="4">
+                        <MudText Class="text-mudtext-lcl"><b>Это интересно</b></MudText>
+                        <MudLink Href="#" Class="footer-link-top">Экскурсии и мастер-классы</MudLink>
+                        <MudLink Href="#" Class="footer-link-top">Почему мы готовим без перчаток?</MudLink>
+                    </MudItem>
+                    <MudItem xs="12" sm="4">
+                        <MudText Class="text-mudtext-lcl"><b>Контакты</b></MudText>
+                        <MudText Style="@text_color"><b>+7(900)-000-00-00</b></MudText>
+                        <MudText Style="@text_color"><b>mail@Japan.com</b></MudText>
+                    </MudItem>
+
+                    <MudDivider />
+
+                    <MudItem xs="6" sm="2">
+                        <MudText Style="@Gray_Lighten1"><b>Japan  © 2026</b></MudText>
+                    </MudItem>
+                    <MudItem xs="6" sm="2">
+                        <MudLink Href="#" Class="footer-link-down"><b>Правовая информация</b></MudLink>
+                    </MudItem>
+                    <MudItem xs="6" sm="2">
+                        <MudLink Href="#" Class="footer-link-down"><b>Калорийность и состав</b></MudLink>
+                    </MudItem>
+
+                    <MudItem xs="12">
+                        <h5 style="@Gray_Darken1">
+                            <b>
+                                © 2026 ООО “Japan”<br />
+                                ОГРН 1111111111111, ИНН 1111111111<br />
+                                111111, Область Какая-то, г. Какой-то, Ленинский проспект, д. 20
+                            </b>
+                        </h5>
+                    </MudItem>
+
+                </MudGrid>
+            </MudContainer>
+        </MudPaper>
+
+    </MudContainer>
+</MudPaper>
+
+@code {
+    private string Gray_Lighten1 = $"color:{Colors.Gray.Lighten1};";
+    private string Gray_Darken1 = $"color:{Colors.Gray.Darken1};";
+    private string text_color = "color: #FFFFFF !important;";
+}
