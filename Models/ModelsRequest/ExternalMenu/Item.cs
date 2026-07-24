@@ -42,6 +42,6 @@ namespace Models_DB_and_Request.ModelsRequest.ExternalMenu
         public int position { get; set; }
         public bool independentQuantity { get; set; }
         public string measureUnitType { get; set; }
-        public object buttonImageUrl { get; set; }
+        public string buttonImageUrl { get; set; }
     }
 }

@@ -19,9 +19,22 @@ namespace Japan_DB.Repository
             _factory = factory;
         }
 
-        public Task<CityMenu> Get(string city)
+        public async Task Create(CityMenu obj)
         {
-            throw new NotImplementedException();
+            using var _db = _factory.CreateDbContext();
+            var addedObj = _db.CityMenus.Add(obj);
+            await _db.SaveChangesAsync();
+        }
+
+        public async Task<CityMenu> Get(string city)
+        {
+            using var _db = _factory.CreateDbContext();
+            var obj = await _db.CityMenus.FirstOrDefaultAsync(x => x.City.ToLower().Equals(city.ToLower()));
+            if (obj != null)
+            {
+                return obj;
+            }
+            return new CityMenu();
         }
 
         public async Task Update(CityMenu obj)

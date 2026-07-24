@@ -1,4 +1,4 @@
-﻿namespace WebAPI.Models
+﻿namespace Models_DB_and_Request.ModelsRequest.Models
 {
     public class IikoApiOptions
     {

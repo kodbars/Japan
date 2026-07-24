@@ -5,12 +5,28 @@
 <NavMenu Categories="@_externalMenu?.itemCategories" />
 
 <MudGrid Spacing="7" Justify="Justify.Center">
-    <Product />
+    @if (_externalMenu != null)
+    {
+        foreach (var row in _externalMenu.itemCategories)
+        {
+            <MudItem xs="12">
+                <MudText Typo="Typo.h4" Align="Align.Center" Class="font-weight-bold" Style="margin: 16px 0 8px 0;">
+                    @row.name
+                </MudText>
+            </MudItem>
+            foreach (var item in row.items)
+            {
+                <Product ProductName="@item.name" DialogText="@item.description" Src="@item.itemSizes[0].buttonImageUrl" />
+            }
+        }
+    }
+    
 </MudGrid>
 
 
 @code {
-    private string DialogText = "Какой-то текст о продукте";
+    private string DialogText = string.Empty;
+    private string Src = string.Empty;
     private Root? _externalMenu;
     protected override async Task OnInitializedAsync()
     {
@@ -19,8 +35,6 @@
 
     private async Task LoadMenuAsync()
     {
-        StateHasChanged();
-
         try
         {
             // 🎯 POST к вашему контроллеру
@@ -37,16 +51,6 @@
             if (externalMenu != null)
             {
                 _externalMenu = externalMenu;
-                foreach (var row in externalMenu.itemCategories)
-                {
-                    foreach (var item in row.items)
-                    {
-                        if (item.sku.Equals("0104"))
-                        {
-                            DialogText = item.description;
-                        }
-                    }
-                }
             }
         }
         catch (Exception ex)

@@ -11,7 +11,7 @@ namespace Models_DB_and_Request.ModelsRequest.ExternalMenu
         public string id { get; set; }
         public string name { get; set; }
         public string description { get; set; }
-        public object buttonImageUrl { get; set; }
+        public string buttonImageUrl { get; set; }
         public object headerImageUrl { get; set; }
         public object iikoGroupId { get; set; }
         public List<Item> items { get; set; }

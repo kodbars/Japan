@@ -29,5 +29,6 @@ namespace WebAPI.Controllers
             var externalMenu = await _externalMenuService.GetExternalMenuAsync();
             return Ok(externalMenu);
         }
+
     }
 }

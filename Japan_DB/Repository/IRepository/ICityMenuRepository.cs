@@ -9,6 +9,7 @@ namespace Japan_DB.Repository.IRepository
 {
     public interface ICityMenuRepository
     {
+        public Task Create(CityMenu obj);
         public Task Update(CityMenu obj);
         public Task<CityMenu> Get(string city);
     }

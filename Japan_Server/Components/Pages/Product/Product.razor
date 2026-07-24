@@ -3,21 +3,34 @@
 @inject ILogger<Product> Logger
 
 <MudItem>
-    <MudPaper Height="320px" Width="260px" Style="position: relative;">
+    <MudPaper Elevation="2" Class="product-card" Style="border-radius: 16px; overflow: hidden; height: 320px; width: 260px; position: relative; display: flex; flex-direction: column;">
         
         <!-- Кнопка Info в правом верхнем углу -->
         <MudIconButton Icon="@Icons.Material.Filled.Info"
                        @onclick="OpenDialogAsync"
                        Variant="Variant.Filled"
-                       Style="position: absolute; top: 8px; right: 8px; z-index: 10;"
+                       Style="position: absolute; top: 16px; right: 20px; z-index: 10;"
                        Color="Color.Default"
                        Size="Size.Small" />
         
-        
-        <div Style="flex: 1; min-height: 0; position: relative;">
-            <MudImage Height="260" Width="260" Src="https://16a9564f-f8ec-42ba-a998-3027aa809e50.selstorage.ru/demobars/84414/images/items/cd393fabfd308b52ba4b1eb2170c9427.WEBP" Style="object-fit: cover;" />
+
+        <div Style="flex: 1; min-height: 0; position: relative; margin: 4px 8px 0 8px; border-radius: 12px; overflow: hidden; box-shadow: 0 0 12px rgba(0,0,0,0.08);">
+            @if (Src == null)
+            {
+                <MudImage Height="260" Width="260" Src="images/default.png" Style="object-fit: cover; border-radius: 12px;" />
+            }
+            else
+            {
+                <MudImage Height="260" Width="260" Src="@Src" Style="object-fit: cover; border-radius: 12px;" />
+            }
         </div>
 
+
+
+        <div Style="padding: 8px 12px 0 12px; font-weight: 500; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex-shrink: 0;">
+            @ProductName
+        </div>
+        
         <MudToolBar Style="height: 60px; justify-content: center; gap: 4px;">
             <MudIconButton Icon="@Icons.Material.Outlined.Remove" Disabled="@Disabled" @onclick="MinusOnePositionAsync" Size="Size.Small" />
             <MudNumericField HideSpinButtons="true" @bind-Value="IntValue" Label="@AMOUNT" Variant="Variant.Text" Min="0" Style="width: 70px;" InputClass="text-center" />
@@ -30,7 +43,12 @@
     private int IntValue { get; set; } = 0;
     private const string AMOUNT = "Количество";
     private bool Disabled = true;
-    private string DialogText = "Какой-то текст о продукте";
+    [Parameter]
+    public string DialogText { get; set; } = "Информация о продукте";
+    [Parameter]
+    public string Src { get; set; } = "images/default.png";
+    [Parameter]
+    public string ProductName { get; set; }
 
     private Task OpenDialogAsync()
     {
@@ -38,9 +56,9 @@
     
         // Создаем параметры для диалога
         var parameters = new DialogParameters
-    {
-        { nameof(ProductInfo.DialogContent), DialogText }
-    };
+        {
+            { nameof(ProductInfo.DialogContent), DialogText }
+        };
     
         return DialogService.ShowAsync<ProductInfo>("Simple Dialog", parameters, options);
     }

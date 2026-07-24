@@ -21,6 +21,6 @@ namespace Models_DB_and_Request.ModelsRequest.ExternalMenu
         public List<Nutrition> nutritions { get; set; }
         public bool isHidden { get; set; }
         public string measureUnitType { get; set; }
-        public object buttonImageUrl { get; set; }
+        public string buttonImageUrl { get; set; }
     }
 }

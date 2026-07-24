@@ -1,8 +1,11 @@
 ﻿<div class="d-flex justify-center" style="padding: 10px;">
     <MudButtonGroup Variant="Variant.Filled">
-        @foreach (var item in Categories)
+        @if (Categories != null && Categories.Any())
         {
-            <MudButton>@item.name</MudButton>
+            @foreach (var item in Categories)
+            {
+                <MudButton>@item.name</MudButton>
+            }
         }
     </MudButtonGroup>
 </div>
