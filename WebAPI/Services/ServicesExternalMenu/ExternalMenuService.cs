@@ -59,18 +59,7 @@ namespace WebAPI.Services.ServicesExternalMenu
             var content = new StringContent(json, Encoding.UTF8, "application/json");
             var response = await client.PostAsync($"{_options.BaseUrl}/2/menu/by_id", content);
 
-            // Если iiko вернул 429 TooManyRequests
-            //if (response.StatusCode == System.Net.HttpStatusCode.TooManyRequests)
-            //{
-            //    _logger.LogWarning("Превышен лимит запросов к iiko. Возвращаем кэш (если есть)");
-            //    if (menu != null)
-            //    {
-            //        // Можно продлить срок жизни кэша, чтобы не падать
-            //        _lastFetch = DateTime.UtcNow;
-            //        return menu;
-            //    }
-            //    throw new Exception("Превышен лимит запросов к iiko, повторите позже.");
-            //}
+           
 
             if (!response.IsSuccessStatusCode)
             {

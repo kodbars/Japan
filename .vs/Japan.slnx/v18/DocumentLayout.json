@@ -66,8 +66,7 @@
               "RelativeToolTip": "WebAPI\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-07-25T07:53:22.333Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-25T07:53:22.333Z"
             },
             {
               "$type": "Document",
@@ -79,8 +78,7 @@
               "RelativeToolTip": "Models\\DB\\CityMenu.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-25T06:37:20.158Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-25T06:37:20.158Z"
             },
             {
               "$type": "Document",
@@ -92,8 +90,7 @@
               "RelativeToolTip": "WebAPI\\Services\\ServicesExternalMenuCacheDB\\IServices\\IExternalMenuCacheDB.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-24T15:54:37.889Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-24T15:54:37.889Z"
             },
             {
               "$type": "Document",
@@ -103,7 +100,7 @@
               "RelativeDocumentMoniker": "WebAPI\\Services\\ServicesExternalMenu\\ExternalMenuService.cs",
               "ToolTip": "F:\\VS_Project\\Japan\\WebAPI\\Services\\ServicesExternalMenu\\ExternalMenuService.cs",
               "RelativeToolTip": "WebAPI\\Services\\ServicesExternalMenu\\ExternalMenuService.cs",
-              "ViewState": "AgIAACMAAAAAH7k16aYCwBEAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAH7k16aYCwD0AAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-21T11:04:11.329Z",
               "EditorCaption": ""
@@ -118,8 +115,7 @@
               "RelativeToolTip": "Models\\ModelsRequest\\ExternalMenu\\ItemSize.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAUwBkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-20T08:46:36.559Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-20T08:46:36.559Z"
             },
             {
               "$type": "Document",
@@ -131,8 +127,7 @@
               "RelativeToolTip": "Models\\ModelsRequest\\ExternalMenu\\ItemCategory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-20T08:46:10.761Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-20T08:46:10.761Z"
             },
             {
               "$type": "Document",
@@ -144,8 +139,7 @@
               "RelativeToolTip": "Models\\ModelsRequest\\ExternalMenu\\Item.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAvwBEAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-20T08:45:32.726Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-20T08:45:32.726Z"
             },
             {
               "$type": "Document",
@@ -157,8 +151,7 @@
               "RelativeToolTip": "Japan_Server\\Components\\Pages\\Product\\ProductRequest.razor",
               "ViewState": "AgIAABoAAAAAAAAAAAAAACgAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-20T08:19:28.279Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-20T08:19:28.279Z"
             },
             {
               "$type": "Document",
@@ -170,8 +163,7 @@
               "RelativeToolTip": "Japan_Server\\Components\\Pages\\Product\\Product.razor",
               "ViewState": "AgIAAAQAAAAAAAAAAAAkwBgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-20T08:18:02.593Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-20T08:18:02.593Z"
             },
             {
               "$type": "Document",
@@ -183,8 +175,7 @@
               "RelativeToolTip": "WebAPI\\Program.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAwwDEAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-17T16:07:32.733Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-17T16:07:32.733Z"
             },
             {
               "$type": "Document",
@@ -196,8 +187,7 @@
               "RelativeToolTip": "WebAPI\\Services\\ServicesExternalMenuCacheDB\\ExternalMenuCacheDB.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAQwCsAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-26T16:14:47.778Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-26T16:14:47.778Z"
             }
           ]
         }
