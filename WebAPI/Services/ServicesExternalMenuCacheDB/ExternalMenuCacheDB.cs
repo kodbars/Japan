@@ -10,45 +10,49 @@ namespace WebAPI.Services.ServicesExternalMenuCacheDB
     public class ExternalMenuCacheDB : IExternalMenuCacheDB
     {
         private readonly IDbContextFactory<AppDbContext> _dbContextFactory;
-        private readonly IExternalMenuService _externalMenuService;
         private readonly ILogger<ExternalMenuCacheDB> _logger;
 
-        public ExternalMenuCacheDB(IDbContextFactory<AppDbContext> dbContextFactory, IExternalMenuService externalMenuService, ILogger<ExternalMenuCacheDB> logger)
+        public ExternalMenuCacheDB(IDbContextFactory<AppDbContext> dbContextFactory, ILogger<ExternalMenuCacheDB> logger)
         {
             _dbContextFactory = dbContextFactory;
-            _externalMenuService = externalMenuService;
             _logger = logger;
         }
 
-        public Task<CityMenu> CreateMenuCache(Root menu)
+        public async Task<CityMenu> CreateMenuCacheAsync(CityMenu menu)
         {
             throw new NotImplementedException();
         }
 
-        public Task<int> Delete(int id)
+        public async Task<int> DeleteAsync(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<CityMenu>> GetAll()
+        public async Task<IEnumerable<CityMenu>> GetAllAsync()
         {
             throw new NotImplementedException();
         }
 
-        public Task<CityMenu> GetMenuCache(Root menu)
-        {
-            throw new NotImplementedException();
-        }
-
-        public async Task<CityMenu> UpdateMenuCache(Root menu)
+        public async Task<CityMenu> GetMenuCacheAsync(string city)
         {
             using var _db = _dbContextFactory.CreateDbContext();
-            if (await _db.CityMenus.FirstOrDefaultAsync(x => x.OrganizationId == menu.) is CityMenu found)
+            var obj = await _db.CityMenus.FirstOrDefaultAsync(x => x.City == city);
+            if (obj != null)
             {
-                _db.Entry(found).CurrentValues.SetValues(obj);
+                return obj;
+            }
+            return new CityMenu();
+        }
+
+        public async Task<CityMenu> UpdateMenuCacheAsync(CityMenu menu)
+        {
+            using var _db = _dbContextFactory.CreateDbContext();
+            if (await _db.CityMenus.FirstOrDefaultAsync(x => x.City == menu.City) is CityMenu found)
+            {
+                _db.Entry(found).CurrentValues.SetValues(menu);
                 await _db.SaveChangesAsync();
             }
-            return obj;
+            return menu;
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Models_DB_and_Request.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     City = table.Column<string>(type: "NVARCHAR(40)", maxLength: 40, nullable: false),
                     OrganizationId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    ExternalMenuId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    ExternalMenuId = table.Column<int>(type: "int", nullable: false),
                     ExternalMenu = table.Column<string>(type: "NVARCHAR(MAX)", nullable: false),
                     CacheDayExternalMenu = table.Column<DateTime>(type: "DATETIME2(7)", nullable: false)
                 },
@@ -32,12 +32,6 @@ namespace Models_DB_and_Request.Migrations
                 name: "IX_CityMenus_Lookup",
                 table: "CityMenus",
                 columns: new[] { "City", "OrganizationId", "ExternalMenuId", "CacheDayExternalMenu" });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_CityMenus_Unique",
-                table: "CityMenus",
-                columns: new[] { "City", "OrganizationId", "ExternalMenuId" },
-                unique: true);
         }
 
         /// <inheritdoc />

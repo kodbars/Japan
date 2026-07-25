@@ -5,10 +5,10 @@ namespace WebAPI.Services.ServicesExternalMenuCacheDB.IServices
 {
     public interface IExternalMenuCacheDB
     {
-        public Task<CityMenu> GetMenuCache(Root menu);
-        public Task<CityMenu> CreateMenuCache(Root menu);
-        public Task<CityMenu> UpdateMenuCache(Root menu);
-        public Task<int> Delete(int id);
-        public Task<IEnumerable<CityMenu>> GetAll(); //тут надо додумать, так как получать надо список городов
+        public Task<CityMenu> GetMenuCacheAsync(string city);
+        public Task<CityMenu> CreateMenuCacheAsync(CityMenu menu);
+        public Task<CityMenu> UpdateMenuCacheAsync(CityMenu menu);
+        public Task<int> DeleteAsync(int id);
+        public Task<IEnumerable<CityMenu>> GetAllAsync(); //тут надо додумать, так как получать надо список городов
     }
 }

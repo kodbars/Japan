@@ -1,6 +1,10 @@
+using Microsoft.EntityFrameworkCore;
+using Models_DB_and_Request.Data;
 using Models_DB_and_Request.ModelsRequest.Models;
 using WebAPI.Services.ServicesExternalMenu;
 using WebAPI.Services.ServicesExternalMenu.IServices;
+using WebAPI.Services.ServicesExternalMenuCacheDB;
+using WebAPI.Services.ServicesExternalMenuCacheDB.IServices;
 using WebAPI.Services.ServicesToken;
 using WebAPI.Services.ServicesToken.IServices;
 
@@ -16,6 +20,10 @@ builder.Services.Configure<IikoApiOptions>(
 builder.Services.AddHttpClient();
 builder.Services.AddSingleton<ITokenService, TokenService>();
 builder.Services.AddScoped<IExternalMenuService, ExternalMenuService>();
+builder.Services.AddScoped<IExternalMenuCacheDB, ExternalMenuCacheDB>();
+
+builder.Services.AddDbContextFactory<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddCors(options =>
 {

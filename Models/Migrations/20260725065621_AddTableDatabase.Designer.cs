@@ -12,7 +12,7 @@ using Models_DB_and_Request.Data;
 namespace Models_DB_and_Request.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260419102336_AddTableDatabase")]
+    [Migration("20260725065621_AddTableDatabase")]
     partial class AddTableDatabase
     {
         /// <inheritdoc />
@@ -45,17 +45,13 @@ namespace Models_DB_and_Request.Migrations
                         .IsRequired()
                         .HasColumnType("NVARCHAR(MAX)");
 
-                    b.Property<Guid>("ExternalMenuId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("ExternalMenuId")
+                        .HasColumnType("int");
 
                     b.Property<Guid>("OrganizationId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("City", "OrganizationId", "ExternalMenuId")
-                        .IsUnique()
-                        .HasDatabaseName("IX_CityMenus_Unique");
 
                     b.HasIndex("City", "OrganizationId", "ExternalMenuId", "CacheDayExternalMenu")
                         .HasDatabaseName("IX_CityMenus_Lookup");

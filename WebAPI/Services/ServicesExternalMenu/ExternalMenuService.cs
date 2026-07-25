@@ -1,41 +1,48 @@
 ﻿using Microsoft.Extensions.Options;
+using Models_DB_and_Request.DB;
+using Models_DB_and_Request.ModelsRequest.ExternalMenu;
+using Models_DB_and_Request.ModelsRequest.Models;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
-using System.Net.Http.Headers;
-using Models_DB_and_Request.ModelsRequest.Models;
-using WebAPI.Services.ServicesToken.IServices;
 using WebAPI.Services.ServicesExternalMenu.IServices;
-using Models_DB_and_Request.ModelsRequest.ExternalMenu;
+using WebAPI.Services.ServicesExternalMenuCacheDB;
+using WebAPI.Services.ServicesExternalMenuCacheDB.IServices;
+using WebAPI.Services.ServicesToken.IServices;
 
 namespace WebAPI.Services.ServicesExternalMenu
 {
     public class ExternalMenuService : IExternalMenuService
     {
         private readonly IHttpClientFactory _httpClientFactory;
+        private readonly IExternalMenuCacheDB _cachedMenuDB;
         private readonly ILogger<ExternalMenuService> _logger;
         private readonly IikoApiOptions _options;
         private readonly ITokenService _token;
 
-        // Кэш и время последнего обновления
-        private Root _cachedMenu;
-        private DateTime _lastFetch = DateTime.MinValue;
-        private readonly TimeSpan _cacheDuration = TimeSpan.FromMinutes(60); // 60 минут
+        private CityMenu _cityMenu;
+        private readonly TimeSpan _cacheDuration = TimeSpan.FromDays(1); // 1 день
 
-        public ExternalMenuService(IHttpClientFactory httpClientFactory, ILogger<ExternalMenuService> logger, IOptions<IikoApiOptions> options, ITokenService token)
+        public ExternalMenuService(IHttpClientFactory httpClientFactory, ILogger<ExternalMenuService> logger, IOptions<IikoApiOptions> options, ITokenService token, IExternalMenuCacheDB cachedMenuDB)
         {
             _httpClientFactory = httpClientFactory;
             _logger = logger;
             _options = options.Value;
             _token = token;
+            _cachedMenuDB = cachedMenuDB;
         }
 
         public async Task<Root> GetExternalMenuAsync()
         {
+            string city = "Кемерово-1";
+
+            _cityMenu = await _cachedMenuDB.GetMenuCacheAsync(city);
+            var menu = JsonSerializer.Deserialize<Root>(_cityMenu.ExternalMenu);
             // Если кэш ещё свежий — отдаём его
-            if (_cachedMenu != null && DateTime.UtcNow - _lastFetch < _cacheDuration)
+            if (menu != null && DateTime.UtcNow - _cityMenu.CacheDayExternalMenu < _cacheDuration)
             {
                 _logger.LogInformation("Возвращаем закэшированное меню");
-                return _cachedMenu;
+                return menu;
             }
 
             _logger.LogInformation("Запрос токена ExternalMenuService");
@@ -47,23 +54,23 @@ namespace WebAPI.Services.ServicesExternalMenu
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
 
-            var requestBody = new { externalMenuId = _options.ExternalMenuId, organizationIds = _options.OrganizationIds };
+            var requestBody = new { externalMenuId = _cityMenu.ExternalMenuId, organizationIds = _cityMenu.OrganizationId };
             var json = JsonSerializer.Serialize(requestBody);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
             var response = await client.PostAsync($"{_options.BaseUrl}/2/menu/by_id", content);
 
             // Если iiko вернул 429 TooManyRequests
-            if (response.StatusCode == System.Net.HttpStatusCode.TooManyRequests)
-            {
-                _logger.LogWarning("Превышен лимит запросов к iiko. Возвращаем кэш (если есть)");
-                if (_cachedMenu != null)
-                {
-                    // Можно продлить срок жизни кэша, чтобы не падать
-                    _lastFetch = DateTime.UtcNow;
-                    return _cachedMenu;
-                }
-                throw new Exception("Превышен лимит запросов к iiko, повторите позже.");
-            }
+            //if (response.StatusCode == System.Net.HttpStatusCode.TooManyRequests)
+            //{
+            //    _logger.LogWarning("Превышен лимит запросов к iiko. Возвращаем кэш (если есть)");
+            //    if (menu != null)
+            //    {
+            //        // Можно продлить срок жизни кэша, чтобы не падать
+            //        _lastFetch = DateTime.UtcNow;
+            //        return menu;
+            //    }
+            //    throw new Exception("Превышен лимит запросов к iiko, повторите позже.");
+            //}
 
             if (!response.IsSuccessStatusCode)
             {
@@ -80,8 +87,9 @@ namespace WebAPI.Services.ServicesExternalMenu
             // Обновляем кэш
             if (externalMenuResponse != null)
             {
-                _cachedMenu = externalMenuResponse;
-                _lastFetch = DateTime.UtcNow;
+                _cityMenu.ExternalMenu = responseJson;
+                _cityMenu.CacheDayExternalMenu = DateTime.UtcNow;
+                await _cachedMenuDB.UpdateMenuCacheAsync(_cityMenu);
                 _logger.LogInformation("Меню успешно обновлено в кэше");
             }
 

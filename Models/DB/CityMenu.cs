@@ -12,7 +12,7 @@ namespace Models_DB_and_Request.DB
         public int Id { get; set; }  // Primary Key
         public string City { get; set; } = string.Empty;        // Название города
         public Guid OrganizationId { get; set; }                 // ID организации
-        public Guid ExternalMenuId { get; set; }                 // ID меню
+        public int ExternalMenuId { get; set; }                 // ID меню
         public string ExternalMenu { get; set; } = string.Empty; // JSON меню
         public DateTime CacheDayExternalMenu { get; set; }       // Дата истечения времени меню
     }

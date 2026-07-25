@@ -42,17 +42,13 @@ namespace Models_DB_and_Request.Migrations
                         .IsRequired()
                         .HasColumnType("NVARCHAR(MAX)");
 
-                    b.Property<Guid>("ExternalMenuId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("ExternalMenuId")
+                        .HasColumnType("int");
 
                     b.Property<Guid>("OrganizationId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("City", "OrganizationId", "ExternalMenuId")
-                        .IsUnique()
-                        .HasDatabaseName("IX_CityMenus_Unique");
 
                     b.HasIndex("City", "OrganizationId", "ExternalMenuId", "CacheDayExternalMenu")
                         .HasDatabaseName("IX_CityMenus_Lookup");
