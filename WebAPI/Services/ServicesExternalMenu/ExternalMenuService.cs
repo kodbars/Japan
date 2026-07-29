@@ -54,12 +54,10 @@ namespace WebAPI.Services.ServicesExternalMenu
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
 
-            var requestBody = new { externalMenuId = _cityMenu.ExternalMenuId, organizationIds = _cityMenu.OrganizationId };
+            var requestBody = new { externalMenuId = _cityMenu.ExternalMenuId.ToString(), organizationIds = new List<Guid>() { _cityMenu.OrganizationId } };
             var json = JsonSerializer.Serialize(requestBody);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
             var response = await client.PostAsync($"{_options.BaseUrl}/2/menu/by_id", content);
-
-           
 
             if (!response.IsSuccessStatusCode)
             {

@@ -4,7 +4,7 @@
         {
             @foreach (var item in Categories)
             {
-                <MudButton>@item.name</MudButton>
+                <MudButton @onclick="() => OnCategoryClick(item.name)">@item.name</MudButton>
             }
         }
     </MudButtonGroup>
@@ -13,4 +13,15 @@
 @code {
     [Parameter]
     public List<ItemCategory>? Categories { get; set; }
+
+    [Parameter]
+    public EventCallback<string> OnCategorySelected { get; set; }
+
+    private async Task OnCategoryClick(string categoryName)
+    {
+        if (OnCategorySelected.HasDelegate)
+        {
+            await OnCategorySelected.InvokeAsync(categoryName);
+        }
+    }
 }

@@ -1,15 +1,18 @@
 ﻿@inject HttpClient Http
 @inject ILogger<Product> Logger
+@inject IJSRuntime JSRuntime
 
 
-<NavMenu Categories="@_externalMenu?.itemCategories" />
+<NavMenu Categories="@_externalMenu?.itemCategories" OnCategorySelected="ScrollToCategory" />
 
 <MudGrid Spacing="7" Justify="Justify.Center">
     @if (_externalMenu != null)
     {
         foreach (var row in _externalMenu.itemCategories)
         {
-            <MudItem xs="12">
+            string categoryId = "category-" + row.name.Replace(" ", "-").Replace(".", "-").ToLowerInvariant();
+
+            <MudItem id="@categoryId" xs="12">
                 <MudText Typo="Typo.h4" Align="Align.Center" Class="font-weight-bold" Style="margin: 16px 0 8px 0;">
                     @row.name
                 </MudText>
@@ -18,9 +21,10 @@
             {
                 <Product ProductName="@item.name" DialogText="@item.description" Src="@item.itemSizes[0].buttonImageUrl" />
             }
+
         }
     }
-    
+
 </MudGrid>
 
 
@@ -61,5 +65,11 @@
         {
             StateHasChanged();
         }
+    }
+
+    private async Task ScrollToCategory(string categoryName)
+    {
+        string id = "category-" + categoryName.Replace(" ", "-").Replace(".", "-").ToLowerInvariant();
+        await JSRuntime.InvokeVoidAsync("scrollToElement", id);
     }
 }
