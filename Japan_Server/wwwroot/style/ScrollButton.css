@@ -1,0 +1,71 @@
+﻿/* Основа — вертикальная панель слева */
+.scroll-to-left-panel {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100vh; /* на всю высоту экрана */
+    background: rgba(179, 179, 179, 1);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateX(-100%); /* скрыта за левым краем */
+    opacity: 0;
+    pointer-events: none;
+    z-index: 999;
+    border-radius: 0 8px 8px 0; /* скругление правого края */
+    user-select: none;
+}
+
+    .scroll-to-left-panel.visible {
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .scroll-to-left-panel:hover {
+        background: rgba(138, 138, 138, 1);
+        width: 100px; /* небольшое расширение при наведении */
+    }
+
+.panel-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+    .panel-content i {
+        font-size: 32px;
+    }
+
+    .panel-content span {
+        writing-mode: vertical-rl; /* вертикальный текст */
+        letter-spacing: 2px;
+        font-size: 14px;
+    }
+
+/* Адаптив для маленьких экранов */
+@media (max-width: 768px) {
+    .scroll-to-left-panel {
+        width: 50px;
+        height: 80vh;
+        top: 10vh; /* не на всю высоту, чтобы не мешать */
+    }
+
+    .panel-content i {
+        font-size: 24px;
+    }
+
+    .panel-content span {
+        font-size: 12px;
+    }
+}

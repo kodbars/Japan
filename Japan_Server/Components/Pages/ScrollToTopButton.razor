@@ -1,0 +1,33 @@
+﻿@inject IJSRuntime JSRuntime
+
+<div class="scroll-to-left-panel @(IsVisible ? "visible" : "")" @onclick="ScrollToTop">
+    <div class="panel-content">
+        <i class="fas fa-chevron-up"></i>
+        <span>Вверх</span>
+    </div>
+</div>
+
+@code {
+    private bool IsVisible = false;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // Подписываемся на событие прокрутки через JS
+            await JSRuntime.InvokeVoidAsync("scrollToTopInterop.init", DotNetObjectReference.Create(this));
+        }
+    }
+
+    [JSInvokable]
+    public void OnScroll(bool isVisible)
+    {
+        IsVisible = isVisible;
+        StateHasChanged();
+    }
+
+    private async Task ScrollToTop()
+    {
+        await JSRuntime.InvokeVoidAsync("scrollToTopInterop.scrollToTop");
+    }
+}
