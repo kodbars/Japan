@@ -2,9 +2,10 @@
 .scroll-to-left-panel {
     position: fixed;
     left: 0;
-    top: 0;
+    top: 300px; /* ← отступ сверху (под AppBar) */
+    bottom: 300px; /* ← отступ снизу (над LowerContainerLoyout) */
+    height: auto; /* на всю высоту экрана */
     width: 100px;
-    height: 100vh; /* на всю высоту экрана */
     background: rgba(179, 179, 179, 1);
     backdrop-filter: blur(4px);
     display: flex;
@@ -38,9 +39,9 @@
 
 .panel-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;      /* ← теперь элементы в строку */
     align-items: center;
-    gap: 6px;
+    gap: 6px;                 /* ← отрегулируйте промежуток между иконкой и текстом */
 }
 
     .panel-content i {
@@ -48,9 +49,8 @@
     }
 
     .panel-content span {
-        writing-mode: vertical-rl; /* вертикальный текст */
-        letter-spacing: 2px;
-        font-size: 14px;
+        font-size: 20px;
+        letter-spacing: 0.5px;
     }
 
 /* Адаптив для маленьких экранов */
