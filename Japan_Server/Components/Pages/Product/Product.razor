@@ -4,7 +4,7 @@
 
 <MudItem>
     <MudPaper Elevation="2" Class="product-card" Style="border-radius: 16px; overflow: hidden; height: 320px; width: 260px; position: relative; display: flex; flex-direction: column;">
-        
+
         <!-- Кнопка Info в правом верхнем углу -->
         <MudIconButton Icon="@Icons.Material.Filled.Info"
                        @onclick="OpenDialogAsync"
@@ -12,8 +12,8 @@
                        Style="position: absolute; top: 16px; right: 20px; z-index: 10;"
                        Color="Color.Default"
                        Size="Size.Small" />
-        
 
+        
         <div Style="flex: 1; min-height: 0; position: relative; margin: 4px 8px 0 8px; border-radius: 12px; overflow: hidden; box-shadow: 0 0 12px rgba(0,0,0,0.08);">
             @if (Src == null)
             {
@@ -27,21 +27,41 @@
 
 
 
-        <div Style="padding: 8px 12px 0 12px; font-weight: 500; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex-shrink: 0;">
+        <div Style="padding: 8px 12px 0 12px;
+            font-weight: 600;
+            font-size: 18px;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            flex-shrink: 0;">
             @ProductName
         </div>
-        
-        <MudToolBar Style="height: 60px; justify-content: center; gap: 4px;">
-            <MudIconButton Icon="@Icons.Material.Outlined.Remove" Disabled="@Disabled" @onclick="MinusOnePositionAsync" Size="Size.Small" />
-            <MudNumericField HideSpinButtons="true" @bind-Value="IntValue" Label="@AMOUNT" Variant="Variant.Text" Min="0" Style="width: 70px;" InputClass="text-center" />
-            <MudIconButton Icon="@Icons.Material.Outlined.Add" @onclick="PlusOnePositionAsync" Size="Size.Small" />
-        </MudToolBar>
+
+        <div style="display: flex; align-items: center; gap: 8px; margin-top: auto; justify-content: center;">
+            <MudIconButton Icon="@Icons.Material.Outlined.ExposureNeg1" Disabled="@Disabled" @onclick="MinusOnePositionAsync" Size="Size.Medium" />
+            <input type="number"
+                   class="no-spinners"
+                   @bind="IntValue"
+                   @bind:event="oninput"
+                   min="0"
+                   style="width: 50px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 18px;
+            padding: 4px 0;
+            margin: 0;
+            border: none;
+            background: transparent;
+            outline: none;
+            box-shadow: none;" />
+            <MudIconButton Icon="@Icons.Material.Filled.ExposurePlus1" @onclick="PlusOnePositionAsync" Size="Size.Medium" />
+        </div>
     </MudPaper>
 </MudItem>
 
 @code {
     private int IntValue { get; set; } = 0;
-    private const string AMOUNT = "Количество";
     private bool Disabled = true;
     [Parameter]
     public string DialogText { get; set; } = "Информация о продукте";
@@ -53,13 +73,13 @@
     private Task OpenDialogAsync()
     {
         var options = new DialogOptions { CloseOnEscapeKey = true };
-    
+
         // Создаем параметры для диалога
         var parameters = new DialogParameters
         {
             { nameof(ProductInfo.DialogContent), DialogText }
         };
-    
+
         return DialogService.ShowAsync<ProductInfo>("Simple Dialog", parameters, options);
     }
 
