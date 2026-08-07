@@ -38,37 +38,20 @@
             @ProductName
         </div>
 
-        <div style="display: flex; align-items: center; gap: 8px; margin-top: auto; justify-content: center;">
-            <MudIconButton Icon="@Icons.Material.Outlined.ExposureNeg1" Disabled="@Disabled" @onclick="MinusOnePositionAsync" Size="Size.Medium" />
-            <input type="number"
-                   class="no-spinners"
-                   @bind="IntValue"
-                   @bind:event="oninput"
-                   min="0"
-                   style="width: 50px;
-            text-align: center;
-            font-weight: 600;
-            font-size: 18px;
-            padding: 4px 0;
-            margin: 0;
-            border: none;
-            background: transparent;
-            outline: none;
-            box-shadow: none;" />
-            <MudIconButton Icon="@Icons.Material.Filled.ExposurePlus1" @onclick="PlusOnePositionAsync" Size="Size.Medium" />
-        </div>
+        <MudButton @onclick="OpenDialogAsync">@ProductPrice ₽</MudButton>
     </MudPaper>
 </MudItem>
 
 @code {
-    private int IntValue { get; set; } = 0;
-    private bool Disabled = true;
     [Parameter]
     public string DialogText { get; set; } = "Информация о продукте";
     [Parameter]
     public string Src { get; set; } = "images/default.png";
     [Parameter]
     public string ProductName { get; set; }
+    [Parameter]
+    public double? ProductPrice { get; set; }
+
 
     private Task OpenDialogAsync()
     {
@@ -81,23 +64,6 @@
         };
 
         return DialogService.ShowAsync<ProductInfo>("Simple Dialog", parameters, options);
-    }
-
-    private async Task PlusOnePositionAsync()
-    {
-        IntValue++;
-        if (IntValue > 0)
-        {
-            Disabled = false;
-        }
-    }
-    private async Task MinusOnePositionAsync()
-    {
-        IntValue--;
-        if (IntValue < 1)
-        {
-            Disabled = true;
-        }
     }
 
 }

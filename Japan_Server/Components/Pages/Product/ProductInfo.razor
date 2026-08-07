@@ -4,11 +4,33 @@
     </TitleContent>
     <DialogContent>
         @DialogContent
+        <div style="display: flex; align-items: center; gap: 8px; margin-top: auto; justify-content: center;">
+            <MudIconButton Icon="@Icons.Material.Outlined.ExposureNeg1" Disabled="@Disabled" @onclick="MinusOnePositionAsync" Size="Size.Medium" />
+            <input type="number"
+                   class="no-spinners"
+                   @bind="IntValue"
+                   @bind:event="oninput"
+                   min="0"
+                   style="width: 50px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 18px;
+            padding: 4px 0;
+            margin: 0;
+            border: none;
+            background: transparent;
+            outline: none;
+            box-shadow: none;" />
+            <MudIconButton Icon="@Icons.Material.Filled.ExposurePlus1" @onclick="PlusOnePositionAsync" Size="Size.Medium" />
+        </div>
+
     </DialogContent>
+    
     <DialogActions>
         <MudButton OnClick="Submit">OK</MudButton>
     </DialogActions>
 </MudDialog>
+
 
 @code {
     [CascadingParameter]
@@ -16,5 +38,25 @@
     [Parameter]
     public string DialogContent { get; set; }
 
+    private bool Disabled = true;
+    private int IntValue { get; set; } = 0;
+
     private void Submit() => MudDialog.Close(DialogResult.Ok(true));
+
+    private async Task PlusOnePositionAsync()
+    {
+        IntValue++;
+        if (IntValue > 0)
+        {
+            Disabled = false;
+        }
+    }
+    private async Task MinusOnePositionAsync()
+    {
+        IntValue--;
+        if (IntValue < 1)
+        {
+            Disabled = true;
+        }
+    }
 }

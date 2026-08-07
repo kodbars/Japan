@@ -18,7 +18,7 @@
             </MudItem>
             foreach (var item in row.items)
             {
-                <Product ProductName="@item.name" DialogText="@item.description" Src="@item.itemSizes[0].buttonImageUrl" />
+                <Product ProductName="@item.name" DialogText="@item.description" Src="@item.itemSizes[0].buttonImageUrl" ProductPrice="@item.itemSizes[0].prices[0]?.price"/>
             }
 
         }
