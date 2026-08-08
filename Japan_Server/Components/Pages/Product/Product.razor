@@ -60,10 +60,11 @@
         // Создаем параметры для диалога
         var parameters = new DialogParameters
         {
-            { nameof(ProductInfo.DialogContent), DialogText }
+            { nameof(ProductModal.DialogContent), DialogText },
+            { nameof(ProductModal.ProductPrice), ProductPrice}
         };
 
-        return DialogService.ShowAsync<ProductInfo>("Simple Dialog", parameters, options);
+        return DialogService.ShowAsync<ProductModal>("Simple Dialog", parameters, options);
     }
 
 }

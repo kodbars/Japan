@@ -23,7 +23,7 @@
             box-shadow: none;" />
             <MudIconButton Icon="@Icons.Material.Filled.ExposurePlus1" @onclick="PlusOnePositionAsync" Size="Size.Medium" />
         </div>
-
+        <MudButton>@ProductPrice ₽</MudButton>
     </DialogContent>
     
     <DialogActions>
@@ -37,6 +37,8 @@
     private IMudDialogInstance MudDialog { get; set; }
     [Parameter]
     public string DialogContent { get; set; }
+    [Parameter]
+    public double? ProductPrice { get; set; }
 
     private bool Disabled = true;
     private int IntValue { get; set; } = 0;
