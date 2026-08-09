@@ -1,12 +1,13 @@
 ﻿@inject NavigationManager _navigationManager
+@inject IJSRuntime JSRuntime
 
-<MudPaper Height="180px" Width="100%" Elevation="0" Class="banner-paper">
+<MudPaper Height="180px" Width="100%" Class="banner-paper" Style="border-bottom: 2px solid #e0e0e0;">
     <MudContainer MaxWidth="MaxWidth.False" Fixed="true" Class="banner-container">
         
         <!-- 🔹 Изображение: прижато к низу -->
         <MudImage Src="images/Japan.png"
                   Height="115"
-                  @onclick="Home"
+                  @onclick="ScrollToTop"
                   Alt="Логотип"
                   Class="rounded-lg ml-4 banner-image" />
         
@@ -22,13 +23,31 @@
                 Доставка 60 минут или подарим бесплатный ролл
             </MudText>
         </div>
-        
     </MudContainer>
 </MudPaper>
 
 @code {
-    private async Task Home()
+    private bool IsVisible = false;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // Подписываемся на событие прокрутки через JS
+            await JSRuntime.InvokeVoidAsync("scrollToTopInterop.init", DotNetObjectReference.Create(this));
+        }
+    }
+
+    [JSInvokable]
+    public void OnScroll(bool isVisible)
+    {
+        IsVisible = isVisible;
+        StateHasChanged();
+    }
+
+    private async Task ScrollToTop()
     {
         _navigationManager.NavigateTo("/");
+        await JSRuntime.InvokeVoidAsync("scrollToTopInterop.scrollToTop");
     }
 }

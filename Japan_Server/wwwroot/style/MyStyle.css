@@ -1,19 +1,19 @@
 /* Классы для компонента UpperContainerLoyout.razor */
 
 .banner-paper {
-    height: 180px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 110px !important;
     width: 100% !important;
     box-shadow: none !important;
 }
-
 .banner-container {
+    padding: 0 16px 0 0 !important; /* только горизонтальные отступы */
     height: 100% !important;
-    text-align: left !important;
     display: flex !important;
     align-items: stretch !important;
     gap: 16px !important;
-    padding: 8px 16px 8px 0 !important;
-    margin-left: 0 !important;
+    margin: 0 !important;
 }
 
 .banner-image {

@@ -3,12 +3,36 @@
   "WorkspaceRootPath": "F:\\VS_Project\\Japan\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\wwwroot\\js\\operation.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\wwwroot\\js\\operation.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\components\\pages\\layout\\uppercontainerloyout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\components\\pages\\layout\\uppercontainerloyout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\components\\pages\\product\\product.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\components\\pages\\product\\product.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\components\\pages\\product\\productmodal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\components\\pages\\product\\productmodal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\wwwroot\\style\\mystyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\wwwroot\\style\\mystyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\components\\pages\\layout\\appbar\\appbar.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\components\\pages\\layout\\appbar\\appbar.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,30 +42,108 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "operation.js",
+              "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_Server\\wwwroot\\js\\operation.js",
+              "RelativeDocumentMoniker": "Japan_Server\\wwwroot\\js\\operation.js",
+              "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\wwwroot\\js\\operation.js",
+              "RelativeToolTip": "Japan_Server\\wwwroot\\js\\operation.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-08-09T17:11:43.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "App.razor",
+              "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\App.razor",
+              "RelativeDocumentMoniker": "Japan_Server\\Components\\App.razor",
+              "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\App.razor",
+              "RelativeToolTip": "Japan_Server\\Components\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-09T16:57:07.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MyStyle.css",
+              "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_Server\\wwwroot\\style\\MyStyle.css",
+              "RelativeDocumentMoniker": "Japan_Server\\wwwroot\\style\\MyStyle.css",
+              "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\wwwroot\\style\\MyStyle.css",
+              "RelativeToolTip": "Japan_Server\\wwwroot\\style\\MyStyle.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-08-09T07:15:11.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UpperContainerLoyout.razor",
+              "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Pages\\Layout\\UpperContainerLoyout.razor",
+              "RelativeDocumentMoniker": "Japan_Server\\Components\\Pages\\Layout\\UpperContainerLoyout.razor",
+              "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Pages\\Layout\\UpperContainerLoyout.razor",
+              "RelativeToolTip": "Japan_Server\\Components\\Pages\\Layout\\UpperContainerLoyout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-09T07:04:52.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Japan_Server\\Components\\Layout\\MainLayout.razor",
+              "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "Japan_Server\\Components\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAB7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-09T07:00:21.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AppBar.razor",
+              "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Pages\\Layout\\AppBar\\AppBar.razor",
+              "RelativeDocumentMoniker": "Japan_Server\\Components\\Pages\\Layout\\AppBar\\AppBar.razor",
+              "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Pages\\Layout\\AppBar\\AppBar.razor",
+              "RelativeToolTip": "Japan_Server\\Components\\Pages\\Layout\\AppBar\\AppBar.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-09T06:42:07.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ProductModal.razor",
               "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Pages\\Product\\ProductModal.razor",
               "RelativeDocumentMoniker": "Japan_Server\\Components\\Pages\\Product\\ProductModal.razor",
               "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Pages\\Product\\ProductModal.razor",
               "RelativeToolTip": "Japan_Server\\Components\\Pages\\Product\\ProductModal.razor",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAABkAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-08-07T15:35:51.21Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Product.razor",
               "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Pages\\Product\\Product.razor",
               "RelativeDocumentMoniker": "Japan_Server\\Components\\Pages\\Product\\Product.razor",
               "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Pages\\Product\\Product.razor",
               "RelativeToolTip": "Japan_Server\\Components\\Pages\\Product\\Product.razor",
-              "ViewState": "AgIAABwAAAAAAAAAAAAiwCgAAABJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-08-07T15:18:48.226Z",
               "EditorCaption": ""

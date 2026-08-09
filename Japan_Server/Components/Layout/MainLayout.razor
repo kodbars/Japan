@@ -7,16 +7,14 @@
 <MudDialogProvider />
 
 <MudSnackbarProvider />
-
-<MudLayout>
-
-    <AppBar />
+<AppBar />
+<div class="top-header" style="position: sticky; top: 0; z-index: 10; background: #f5f5f5; border-bottom: 1px solid #ddd;">
     <UpperContainerLoyout />
-    <ScrollToTopButton />
+</div>
+<MudLayout>
     <MudMainContent Style="padding: 3px; margin: 0px; margin-bottom: 30px;">
         @Body
     </MudMainContent>
-
     <LowerContainerLoyout />
 </MudLayout>
 

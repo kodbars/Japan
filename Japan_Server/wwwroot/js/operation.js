@@ -1,8 +1,18 @@
 ﻿window.scrollToElement = function (elementId) {
-    var element = document.getElementById(elementId);
-    if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    const element = document.getElementById(elementId);
+    if (!element) return;
+
+    const header = document.querySelector('.top-header');
+    const offset = header ? header.offsetHeight : 0;
+
+    const extraOffset = 35; // подберите нужное значение
+    const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - offset + extraOffset;
+
+    window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+    });
 };
 
 window.scrollToTopInterop = {
