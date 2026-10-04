@@ -39,4 +39,3 @@ app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
 app.Run();
-//Надо настроить кнопку

@@ -50,8 +50,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -60,14 +64,10 @@
               "RelativeDocumentMoniker": "Japan_Server\\Program.cs",
               "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\Program.cs",
               "RelativeToolTip": "Japan_Server\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-29T04:33:47.277Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
@@ -163,8 +163,7 @@
               "RelativeToolTip": "Japan_Server\\Components\\Pages\\Product\\ProductModal.razor",
               "ViewState": "AgIAAAsAAAAAAAAAAAAiwCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-07T15:35:51.21Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-07T15:35:51.21Z"
             },
             {
               "$type": "Document",
