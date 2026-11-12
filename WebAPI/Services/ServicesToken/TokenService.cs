@@ -34,11 +34,16 @@ namespace WebAPI.Services.ServicesToken
             _logger.LogInformation("Запрос нового токена iiko...");
 
             var client = _httpClientFactory.CreateClient();
-            var requestBody = new { apiLogin = _options.ApiLogin };
+            var requestBody = new
+            {
+                apiKey = _options.ApiKey,
+                appId = _options.AppId,
+                clientSecret = _options.ClientSecret,
+            };
             var json = JsonSerializer.Serialize(requestBody);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            var response = await client.PostAsync($"{_options.BaseUrl}/1/access_token", content);
+            var response = await client.PostAsync($"{_options.BaseUrl}/v2/access_token", content);
             if (!response.IsSuccessStatusCode)
             {
                 var errorBody = await response.Content.ReadAsStringAsync();
