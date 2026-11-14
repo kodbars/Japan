@@ -11,3 +11,33 @@
     .custom-button:hover {
         background-color: #a0a0a0; /* новый цвет при наведении */
     }
+
+
+.product-container {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.product-image {
+    flex: 0 0 400px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    min-height: 400px;
+}
+
+.product-description {
+    flex: 1;
+}
+
+.product-price {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}

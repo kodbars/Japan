@@ -18,7 +18,7 @@
             </MudItem>
             foreach (var item in row.items)
             {
-                <Product ProductName="@item.name" DialogText="@item.description" Src="@item.itemSizes[0].buttonImageUrl" ProductPrice="@item.itemSizes[0].prices[0]?.price"/>
+                <Product ProductName="@item.name" DialogText="@item.description" ImageRoot="@item.itemSizes[0].buttonImageUrl" ProductPrice="@item.itemSizes[0].prices[0]?.price"/>
             }
 
         }
@@ -28,8 +28,6 @@
 
 
 @code {
-    private string DialogText = string.Empty;
-    private string Src = string.Empty;
     private Root? _externalMenu;
     protected override async Task OnInitializedAsync()
     {

@@ -2,37 +2,49 @@
     <TitleContent>
         Информация о продукте:
     </TitleContent>
-    <DialogContent>
-        @DialogContent
-        <div style="display: flex; align-items: center; gap: 8px; margin-top: auto; justify-content: center;">
-            <MudIconButton Icon="@Icons.Material.Outlined.ExposureNeg1" Disabled="@Disabled" @onclick="MinusOnePositionAsync" Size="Size.Medium" />
-            <input type="number"
-                   class="no-spinners"
-                   @bind="IntValue"
-                   @bind:event="oninput"
-                   min="0"
-                   style="width: 50px;
-            text-align: center;
-            font-weight: 600;
-            font-size: 18px;
-            padding: 4px 0;
-            margin: 0;
-            border: none;
-            background: transparent;
-            outline: none;
-            box-shadow: none;" />
-            <MudIconButton Icon="@Icons.Material.Filled.ExposurePlus1" @onclick="PlusOnePositionAsync" Size="Size.Medium" />
-        </div>
-        <div style="display: flex; justify-content: center; margin-top: 12px;">
-            <MudButton Variant="Variant.Filled" Class="custom-button">
-                @(ProductPrice * (double)IntValue) ₽
-            </MudButton>
-        </div>
-    </DialogContent>
-
     <DialogActions>
         <MudButton OnClick="Submit">Отмена</MudButton>
     </DialogActions>
+    <DialogContent>
+        <div class="product-container">
+
+            @* Левая часть — изображение *@
+            <div class="product-image">
+                @if (ImageRoot == null)
+                {
+                    <MudImage Height="400"
+                              Width="400"
+                              Src="images/default.png"
+                              Style="object-fit: cover; border-radius: 12px;" />
+                }
+                else
+                {
+                    <MudImage Height="400"
+                              Width="400"
+                              Src="@ImageRoot"
+                              Style="object-fit: cover; border-radius: 12px;" />
+                }
+            </div>
+
+            @* Правая часть — информация *@
+            <div class="product-info">
+
+                <div class="product-description">
+                    @DialogContent
+                </div>
+
+                <div class="product-price">
+                    <MudButton Variant="Variant.Filled"
+                               Class="custom-button">
+                        @(ProductPrice * (double)IntValue) ₽
+                    </MudButton>
+                </div>
+
+            </div>
+        </div>
+    </DialogContent>
+
+    
 </MudDialog>
 
 
@@ -43,26 +55,36 @@
     public string DialogContent { get; set; }
     [Parameter]
     public double? ProductPrice { get; set; }
+    [Parameter]
+    public string? ImageRoot { get; set; }
 
     private bool Disabled = true;
     private int IntValue { get; set; } = 1;
 
+    DialogOptions options = new DialogOptions
+    {
+        MaxWidth = MaxWidth.ExtraLarge,
+        FullWidth = true,
+        CloseButton = false,
+        CloseOnEscapeKey = true
+    };
+
     private void Submit() => MudDialog.Close(DialogResult.Ok(true));
 
-    private async Task PlusOnePositionAsync()
-    {
-        IntValue++;
-        if (IntValue > 1)
-        {
-            Disabled = false;
-        }
-    }
-    private async Task MinusOnePositionAsync()
-    {
-        IntValue--;
-        if (IntValue < 2)
-        {
-            Disabled = true;
-        }
-    }
+    // private async Task PlusOnePositionAsync()
+    // {
+    //     IntValue++;
+    //     if (IntValue > 1)
+    //     {
+    //         Disabled = false;
+    //     }
+    // }
+    // private async Task MinusOnePositionAsync()
+    // {
+    //     IntValue--;
+    //     if (IntValue < 2)
+    //     {
+    //         Disabled = true;
+    //     }
+    // }
 }
