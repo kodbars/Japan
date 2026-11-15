@@ -55,18 +55,26 @@
 
     private Task OpenDialogAsync()
     {
-        var options = new DialogOptions { CloseOnEscapeKey = true };
-
-        // Создаем параметры для диалога
-        var parameters = new DialogParameters
+        DialogOptions options = new DialogOptions
         {
-            { nameof(ProductModal.DialogContent), DialogText },
-            { nameof(ProductModal.ProductPrice), ProductPrice},
-            { nameof(ProductModal.ImageRoot), ImageRoot}
-
+            MaxWidth = MaxWidth.Medium,
+            FullWidth = true,
+            CloseButton = false,
+            CloseOnEscapeKey = true
         };
 
-        return DialogService.ShowAsync<ProductModal>("Simple Dialog", parameters, options);
+        var parameters = new DialogParameters
+    {
+        { nameof(ProductModal.DialogContent), DialogText },
+        { nameof(ProductModal.ProductPrice), ProductPrice },
+        { nameof(ProductModal.ImageRoot), ImageRoot }
+    };
+
+        return DialogService.ShowAsync<ProductModal>(
+            "Simple Dialog",
+            parameters,
+            options
+        );
     }
 
 }

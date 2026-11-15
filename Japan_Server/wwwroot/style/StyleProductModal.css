@@ -41,3 +41,26 @@
     justify-content: center;
     margin-top: 12px;
 }
+
+
+.dialog-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Уменьшаем нижний отступ заголовка */
+.mud-dialog-title {
+    padding-bottom: 0 !important;
+}
+
+/* Уменьшаем верхний отступ содержимого */
+.mud-dialog-content {
+    padding-top: 0 !important;
+}
+
+.mud-dialog-title {
+    padding-top: 4px !important;
+    padding-bottom: 0 !important;
+}

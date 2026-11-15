@@ -3,16 +3,36 @@
   "WorkspaceRootPath": "F:\\VS_Project\\Japan\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\wwwroot\\js\\jsinterop.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\wwwroot\\js\\jsinterop.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\services\\localstorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\services\\localstorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\services\\iservices\\ilocalstorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\services\\iservices\\ilocalstorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\components\\pages\\product\\productmodal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\components\\pages\\product\\productmodal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\components\\pages\\product\\productrequest.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\components\\pages\\product\\productrequest.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\components\\pages\\product\\product.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\components\\pages\\product\\product.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\components\\pages\\product\\productrequest.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\components\\pages\\product\\productrequest.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\wwwroot\\style\\styleproductmodal.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -26,8 +46,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_Server\\Program.cs",
+              "RelativeDocumentMoniker": "Japan_Server\\Program.cs",
+              "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\Program.cs",
+              "RelativeToolTip": "Japan_Server\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-15T17:52:41.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.razor",
+              "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\App.razor",
+              "RelativeDocumentMoniker": "Japan_Server\\Components\\App.razor",
+              "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\App.razor",
+              "RelativeToolTip": "Japan_Server\\Components\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-15T17:51:49.714Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
@@ -35,32 +81,71 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "LocalStorageService.cs",
+              "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_Server\\Services\\LocalStorageService.cs",
+              "RelativeDocumentMoniker": "Japan_Server\\Services\\LocalStorageService.cs",
+              "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\Services\\LocalStorageService.cs",
+              "RelativeToolTip": "Japan_Server\\Services\\LocalStorageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAowDEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-15T17:51:20.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ILocalStorageService.cs",
+              "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_Server\\Services\\IServices\\ILocalStorageService.cs",
+              "RelativeDocumentMoniker": "Japan_Server\\Services\\IServices\\ILocalStorageService.cs",
+              "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\Services\\IServices\\ILocalStorageService.cs",
+              "RelativeToolTip": "Japan_Server\\Services\\IServices\\ILocalStorageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-15T17:49:53.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "jsinterop.js",
+              "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_Server\\wwwroot\\js\\jsinterop.js",
+              "RelativeDocumentMoniker": "Japan_Server\\wwwroot\\js\\jsinterop.js",
+              "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\wwwroot\\js\\jsinterop.js",
+              "RelativeToolTip": "Japan_Server\\wwwroot\\js\\jsinterop.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-11-15T17:46:38.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "StyleProductModal.css",
               "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_Server\\wwwroot\\style\\StyleProductModal.css",
               "RelativeDocumentMoniker": "Japan_Server\\wwwroot\\style\\StyleProductModal.css",
               "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\wwwroot\\style\\StyleProductModal.css",
               "RelativeToolTip": "Japan_Server\\wwwroot\\style\\StyleProductModal.css",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAkwCsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-11-14T17:43:53.376Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Product.razor",
               "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Pages\\Product\\Product.razor",
               "RelativeDocumentMoniker": "Japan_Server\\Components\\Pages\\Product\\Product.razor",
               "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Pages\\Product\\Product.razor",
               "RelativeToolTip": "Japan_Server\\Components\\Pages\\Product\\Product.razor",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAABEAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAACgAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-11-14T17:28:55.159Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "ProductRequest.razor",
               "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Pages\\Product\\ProductRequest.razor",
               "RelativeDocumentMoniker": "Japan_Server\\Components\\Pages\\Product\\ProductRequest.razor",
@@ -73,13 +158,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "ProductModal.razor",
               "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Pages\\Product\\ProductModal.razor",
               "RelativeDocumentMoniker": "Japan_Server\\Components\\Pages\\Product\\ProductModal.razor",
-              "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Pages\\Product\\ProductModal.razor*",
-              "RelativeToolTip": "Japan_Server\\Components\\Pages\\Product\\ProductModal.razor*",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAAAD8AAAARAAAAAAAAAA==",
+              "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Pages\\Product\\ProductModal.razor",
+              "RelativeToolTip": "Japan_Server\\Components\\Pages\\Product\\ProductModal.razor",
+              "ViewState": "AgIAABUAAAAAAAAAAAAwwEQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-11-13T17:49:31.096Z",
               "EditorCaption": ""

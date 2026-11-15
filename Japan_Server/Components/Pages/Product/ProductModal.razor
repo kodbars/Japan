@@ -1,10 +1,13 @@
 ﻿<MudDialog>
     <TitleContent>
-        Информация о продукте:
+        <div class="dialog-title">
+            <h2>Информация о продукте:</h2>
+            <MudIconButton Icon="@Icons.Material.Filled.Cancel"
+                           OnClick="Submit"
+                           Color="Color.Default"
+                           Size="Size.Medium" />
+        </div>
     </TitleContent>
-    <DialogActions>
-        <MudButton OnClick="Submit">Отмена</MudButton>
-    </DialogActions>
     <DialogContent>
         <div class="product-container">
 
@@ -36,7 +39,7 @@
                 <div class="product-price">
                     <MudButton Variant="Variant.Filled"
                                Class="custom-button">
-                        @(ProductPrice * (double)IntValue) ₽
+                        @ProductPrice ₽
                     </MudButton>
                 </div>
 
@@ -61,30 +64,5 @@
     private bool Disabled = true;
     private int IntValue { get; set; } = 1;
 
-    DialogOptions options = new DialogOptions
-    {
-        MaxWidth = MaxWidth.ExtraLarge,
-        FullWidth = true,
-        CloseButton = false,
-        CloseOnEscapeKey = true
-    };
-
     private void Submit() => MudDialog.Close(DialogResult.Ok(true));
-
-    // private async Task PlusOnePositionAsync()
-    // {
-    //     IntValue++;
-    //     if (IntValue > 1)
-    //     {
-    //         Disabled = false;
-    //     }
-    // }
-    // private async Task MinusOnePositionAsync()
-    // {
-    //     IntValue--;
-    //     if (IntValue < 2)
-    //     {
-    //         Disabled = true;
-    //     }
-    // }
 }
