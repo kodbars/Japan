@@ -1,0 +1,39 @@
+﻿@using Japan_Server.Services.IServices
+@inject ILocalStorageService LocalStorageService
+
+<CascadingValue Value="this">
+    @ChildContent
+</CascadingValue>
+
+@code {
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+    internal const string StateKeyName = "SumPrice";
+    public double _sumPrice = 0.0d;
+    public double SumPrice
+    {
+        get => _sumPrice;
+        set
+        {
+            _sumPrice = value;
+            StateHasChanged();
+            SaveState();
+        }
+    }
+
+    private void SaveState()
+    {
+        var date = _sumPrice;
+        LocalStorageService.SetStringAsync(StateKeyName, date.ToString());
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        var state = await LocalStorageService.GetStringAsync(StateKeyName);
+        if (state != null)
+        {
+            _sumPrice = Convert.ToDouble(state);
+            StateHasChanged();
+        }
+    }
+}

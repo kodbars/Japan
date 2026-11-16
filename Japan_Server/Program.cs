@@ -1,9 +1,10 @@
 using Japan_Server.Components;
-using Japan_Server.Services;
 using Microsoft.EntityFrameworkCore;
 using Models_DB_and_Request.Data;
 using MudBlazor.Services;
 using WebAPI.Services.ServicesExternalMenu.IServices;
+using Japan_Server.Services.IServices;
+using Japan_Server.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -41,5 +42,3 @@ app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
 app.Run();
-
-//Test

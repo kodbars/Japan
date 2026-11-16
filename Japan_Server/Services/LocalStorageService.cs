@@ -1,5 +1,6 @@
 ﻿using Microsoft.JSInterop;
 using System.Text.Json;
+using Japan_Server.Services.IServices;
 
 namespace Japan_Server.Services
 {

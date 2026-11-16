@@ -1,4 +1,5 @@
-﻿<MudDialog>
+﻿@inject ILocalStorageService LocalStorageService
+<MudDialog>
     <TitleContent>
         <div class="dialog-title">
             <h2>Информация о продукте:</h2>
@@ -57,12 +58,19 @@
     [Parameter]
     public string DialogContent { get; set; }
     [Parameter]
-    public double? ProductPrice { get; set; }
+    public double ProductPrice { get; set; }
     [Parameter]
     public string? ImageRoot { get; set; }
 
     private bool Disabled = true;
-    private int IntValue { get; set; } = 1;
+
+    [CascadingParameter]
+    public _StateСookie stateСookie { get; set; } = null!;
 
     private void Submit() => MudDialog.Close(DialogResult.Ok(true));
+
+    private void SumPrice()
+    {
+        stateСookie.SumPrice += ProductPrice;
+    }
 }

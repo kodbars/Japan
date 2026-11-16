@@ -1,4 +1,4 @@
-﻿namespace Japan_Server.Services
+﻿namespace Japan_Server.Services.IServices
 {
     public interface ILocalStorageService
     {
