@@ -8,8 +8,27 @@
 @code {
     [Parameter]
     public RenderFragment? ChildContent { get; set; }
-    internal const string StateKeyName = "SumPrice";
-    public double _sumPrice;
+    internal const string StateKeyNamePrice = "SumPrice";
+    internal const string StateKeyNameImg = "ImgRoot";
+    private string _imgRoot = "images/default.png";
+    // надо делать список и передавать список, так как в корзине может быть несколько обектов
+    public string ImgRoot
+    {
+        get => _imgRoot;
+        set
+        {
+            _imgRoot = value;
+            SaveStateImg();
+        }
+    }
+
+    private void SaveStateImg()
+    {
+        var date = _imgRoot;
+        LocalStorageService.SetStringAsync(StateKeyNameImg, date.ToString());
+    }
+
+    private double _sumPrice;
     public double SumPrice
     {
         get => _sumPrice;
@@ -17,22 +36,24 @@
         {
             _sumPrice = value;
             StateHasChanged();
-            SaveState();
+            SaveStatePrice();
         }
     }
 
-    private void SaveState()
+    private void SaveStatePrice()
     {
         var date = _sumPrice;
-        LocalStorageService.SetStringAsync(StateKeyName, date.ToString());
+        LocalStorageService.SetStringAsync(StateKeyNamePrice, date.ToString());
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        var state = await LocalStorageService.GetStringAsync(StateKeyName);
-        if (state != null)
+        var statePrice = await LocalStorageService.GetStringAsync(StateKeyNamePrice);
+        var stateImg = await LocalStorageService.GetStringAsync(StateKeyNameImg);
+        if (statePrice != null)
         {
-            _sumPrice = Convert.ToDouble(state);
+            _sumPrice = Convert.ToDouble(statePrice);
+            _imgRoot = stateImg;
             StateHasChanged();
         }
     }

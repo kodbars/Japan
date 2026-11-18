@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "F:\\VS_Project\\Japan\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\components\\pages\\layout\\uppercontainerloyout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\components\\pages\\layout\\uppercontainerloyout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\components\\pages\\product\\productmodal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\components\\pages\\product\\productmodal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\components\\_state\u0441ookie.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\components\\_state\u0441ookie.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\components\\pages\\product\\product.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\components\\pages\\product\\product.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\components\\pages\\product\\productmodal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\components\\pages\\product\\productmodal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\components\\pages\\product\\productrequest.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\components\\pages\\product\\productrequest.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\wwwroot\\style\\styleproductmodal.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\wwwroot\\style\\styleproductmodal.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\components\\pages\\layout\\uppercontainerloyout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\components\\pages\\layout\\uppercontainerloyout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\components\\_state\u0441ookie.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\components\\_state\u0441ookie.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\wwwroot\\style\\styleproductmodal.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|solutionrelative:japan_server\\wwwroot\\style\\styleproductmodal.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CB6E4633-B0A7-141B-4E6C-7B5016110206}|Japan_Server\\Japan_Server.csproj|f:\\vs_project\\japan\\japan_server\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -62,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,13 +70,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "UpperContainerLoyout.razor",
               "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Pages\\Layout\\UpperContainerLoyout.razor",
               "RelativeDocumentMoniker": "Japan_Server\\Components\\Pages\\Layout\\UpperContainerLoyout.razor",
               "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Pages\\Layout\\UpperContainerLoyout.razor",
               "RelativeToolTip": "Japan_Server\\Components\\Pages\\Layout\\UpperContainerLoyout.razor",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAwwC8AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-11-16T17:49:36.145Z",
               "EditorCaption": ""
@@ -95,13 +95,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ProductModal.razor",
               "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Pages\\Product\\ProductModal.razor",
               "RelativeDocumentMoniker": "Japan_Server\\Components\\Pages\\Product\\ProductModal.razor",
               "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Pages\\Product\\ProductModal.razor",
               "RelativeToolTip": "Japan_Server\\Components\\Pages\\Product\\ProductModal.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAAkAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-11-16T17:36:26.976Z",
               "EditorCaption": ""
@@ -116,18 +116,17 @@
               "RelativeToolTip": "Japan_Server\\Components\\Routes.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-16T17:17:45.755Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-16T17:17:45.755Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "_State\u0421ookie.razor",
               "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\_State\u0421ookie.razor",
               "RelativeDocumentMoniker": "Japan_Server\\Components\\_State\u0421ookie.razor",
               "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\_State\u0421ookie.razor",
               "RelativeToolTip": "Japan_Server\\Components\\_State\u0421ookie.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-11-16T17:16:03.693Z",
               "EditorCaption": ""
@@ -142,8 +141,7 @@
               "RelativeToolTip": "Japan_Server\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T17:52:41.812Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-15T17:52:41.812Z"
             },
             {
               "$type": "Document",
@@ -155,8 +153,7 @@
               "RelativeToolTip": "Japan_Server\\Components\\App.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-15T17:51:49.714Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-15T17:51:49.714Z"
             },
             {
               "$type": "Document",
@@ -168,8 +165,7 @@
               "RelativeToolTip": "Japan_Server\\Services\\LocalStorageService.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAiwDQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T17:51:20.29Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-15T17:51:20.29Z"
             },
             {
               "$type": "Document",
@@ -181,8 +177,7 @@
               "RelativeToolTip": "Japan_Server\\Services\\IServices\\ILocalStorageService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T17:49:53.354Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-15T17:49:53.354Z"
             },
             {
               "$type": "Document",
@@ -198,7 +193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "StyleProductModal.css",
               "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_Server\\wwwroot\\style\\StyleProductModal.css",
               "RelativeDocumentMoniker": "Japan_Server\\wwwroot\\style\\StyleProductModal.css",
@@ -206,18 +201,17 @@
               "RelativeToolTip": "Japan_Server\\wwwroot\\style\\StyleProductModal.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-11-14T17:43:53.376Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-14T17:43:53.376Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Product.razor",
               "DocumentMoniker": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Pages\\Product\\Product.razor",
               "RelativeDocumentMoniker": "Japan_Server\\Components\\Pages\\Product\\Product.razor",
               "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Pages\\Product\\Product.razor",
               "RelativeToolTip": "Japan_Server\\Components\\Pages\\Product\\Product.razor",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAC0AAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAADAAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-11-14T17:28:55.159Z",
               "EditorCaption": ""
@@ -230,7 +224,7 @@
               "RelativeDocumentMoniker": "Japan_Server\\Components\\Pages\\Product\\ProductRequest.razor",
               "ToolTip": "F:\\VS_Project\\Japan\\Japan_Server\\Components\\Pages\\Product\\ProductRequest.razor",
               "RelativeToolTip": "Japan_Server\\Components\\Pages\\Product\\ProductRequest.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-11-14T17:30:03.243Z",
               "EditorCaption": ""
