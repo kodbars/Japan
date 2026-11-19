@@ -15,16 +15,8 @@
 
         
         <div Style="flex: 1; min-height: 0; position: relative; margin: 4px 8px 0 8px; border-radius: 12px; overflow: hidden; box-shadow: 0 0 12px rgba(0,0,0,0.08);">
-            @if (ImageRoot == null)
-            {
-                <MudImage Height="260" Width="260" Src="images/default.png" Style="object-fit: cover; border-radius: 12px;" />
-            }
-            else
-            {
-                <MudImage Height="260" Width="260" Src="@ImageRoot" Style="object-fit: cover; border-radius: 12px;" />
-            }
+            <MudImage Height="260" Width="260" Src="@(ImageRoot == null ? "images/default.png" : ImageRoot)" Style="object-fit: cover; border-radius: 12px;" />
         </div>
-
 
 
         <div Style="padding: 8px 12px 0 12px;
@@ -44,14 +36,20 @@
 
 @code {
     [Parameter]
+    public Item? Item { get; set; }
     public string DialogText { get; set; } = "Информация о продукте";
-    [Parameter]
     public string ImageRoot { get; set; } = "images/default.png";
-    [Parameter]
-    public string ProductName { get; set; }
-    [Parameter]
+    public string? ProductName { get; set; }
     public double? ProductPrice { get; set; }
 
+
+    protected override async Task OnInitializedAsync()
+    {
+        DialogText = Item.description;
+        ImageRoot = Item.itemSizes[0].buttonImageUrl;
+        ProductName = Item.name;
+        ProductPrice = Item.itemSizes[0].prices[0]?.price;
+    }
 
     private Task OpenDialogAsync()
     {
@@ -65,9 +63,7 @@
 
         var parameters = new DialogParameters
     {
-        { nameof(ProductModal.DialogContent), DialogText },
-        { nameof(ProductModal.ProductPrice), ProductPrice },
-        { nameof(ProductModal.ImageRoot), ImageRoot }
+        { nameof(ProductModal.Item), Item }
     };
 
         return DialogService.ShowAsync<ProductModal>(

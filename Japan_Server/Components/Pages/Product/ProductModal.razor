@@ -14,27 +14,17 @@
 
             @* Левая часть — изображение *@
             <div class="product-image">
-                @if (ImageRoot == null)
-                {
-                    <MudImage Height="400"
-                              Width="400"
-                              Src="images/default.png"
-                              Style="object-fit: cover; border-radius: 12px;" />
-                }
-                else
-                {
-                    <MudImage Height="400"
-                              Width="400"
-                              Src="@ImageRoot"
-                              Style="object-fit: cover; border-radius: 12px;" />
-                }
+                <MudImage Height="400"
+                          Width="400"
+                          Src="@(ImageRoot == null ? "images/default.png" : ImageRoot)"
+                          Style="object-fit: cover; border-radius: 12px;" />
             </div>
 
             @* Правая часть — информация *@
             <div class="product-info">
 
                 <div class="product-description">
-                    @DialogContent
+                    @DialogText
                 </div>
 
                 <div class="product-price">
@@ -48,21 +38,18 @@
         </div>
     </DialogContent>
 
-    
 </MudDialog>
 
 
 @code {
     [CascadingParameter]
     private IMudDialogInstance MudDialog { get; set; }
-    [Parameter]
-    public string DialogContent { get; set; }
-    [Parameter]
+    public string DialogText { get; set; }
     public double ProductPrice { get; set; }
-    [Parameter]
     public string? ImageRoot { get; set; }
 
-    private bool Disabled = true;
+    [Parameter]
+    public Item? Item { get; set; }
 
     [CascadingParameter]
     public _StateСookie stateСookie { get; set; } = null!;
@@ -73,4 +60,13 @@
     {
         stateСookie.SumPrice += ProductPrice;
     }
+
+    protected override async Task OnInitializedAsync()
+    {
+        DialogText = Item.description;
+        ImageRoot = Item.itemSizes[0].buttonImageUrl;
+        ProductPrice = (double) Item.itemSizes[0].prices[0]?.price;
+    }
+
+
 }
