@@ -24,7 +24,7 @@
                 Доставка 60 минут или подарим бесплатный ролл
             </MudText>
         </div>
-        <MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.LocalDining" IconSize="@Size.Large" Size="@Size.Large" Color="Color.Warning" Style="margin-left: auto; margin-right: 100px; border-radius: 20px; height: 50px; margin-top: 25px;">@(stateСookie.SumPrice == 0.0 ? "Корзина" : stateСookie.SumPrice)</MudButton>
+        <MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.LocalDining" IconSize="@Size.Large" Size="@Size.Large" Color="Color.Warning" Style="margin-left: auto; margin-right: 100px; border-radius: 20px; height: 50px; margin-top: 25px;">@(stateСookie.SumPrice() == 0.0 ? "Корзина" : stateСookie.SumPrice())</MudButton>
     </MudContainer>
 </MudPaper>
 

@@ -16,7 +16,7 @@
             <div class="product-image">
                 <MudImage Height="400"
                           Width="400"
-                          Src="@(ImageRoot == null ? "images/default.png" : ImageRoot)"
+                          Src="@(_imageRoot == null ? "images/default.png" : _imageRoot)"
                           Style="object-fit: cover; border-radius: 12px;" />
             </div>
 
@@ -24,13 +24,13 @@
             <div class="product-info">
 
                 <div class="product-description">
-                    @DialogText
+                    @_dialogText
                 </div>
 
                 <div class="product-price">
                     <MudButton Variant="Variant.Filled"
-                               Class="custom-button" onclick="@SumPrice">
-                        @ProductPrice ₽
+                               Class="custom-button" onclick="@AddBasket">
+                        @_productPrice ₽
                     </MudButton>
                 </div>
 
@@ -44,28 +44,37 @@
 @code {
     [CascadingParameter]
     private IMudDialogInstance MudDialog { get; set; }
-    public string DialogText { get; set; }
-    public double ProductPrice { get; set; }
-    public string? ImageRoot { get; set; }
-
-    [Parameter]
-    public Item? Item { get; set; }
+    private string _dialogText { get; set; }
+    private double _productPrice { get; set; }
+    private string? _imageRoot { get; set; }
+    private string? _productName { get; set; }
 
     [CascadingParameter]
     public _StateСookie stateСookie { get; set; } = null!;
 
+    [Parameter]
+    public Item? Item { get; set; }
+
     private void Submit() => MudDialog.Close(DialogResult.Ok(true));
 
-    private void SumPrice()
+    private void AddBasket()
     {
-        stateСookie.SumPrice += ProductPrice;
+        var basket = new Basket()
+        {
+            ImageRoot = _imageRoot,
+            ProductName = _productName,
+            ProductPrice = _productPrice,
+            Amount = 1
+        };
+        stateСookie.AddBasket(basket);
     }
 
     protected override async Task OnInitializedAsync()
     {
-        DialogText = Item.description;
-        ImageRoot = Item.itemSizes[0].buttonImageUrl;
-        ProductPrice = (double) Item.itemSizes[0].prices[0]?.price;
+        _productName = Item.name;
+        _dialogText = Item.description;
+        _imageRoot = Item.itemSizes[0].buttonImageUrl;
+        _productPrice = (double) Item.itemSizes[0].prices[0]?.price;
     }
 
 

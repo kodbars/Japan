@@ -37,10 +37,10 @@
 @code {
     [Parameter]
     public Item? Item { get; set; }
-    public string DialogText { get; set; } = "Информация о продукте";
-    public string ImageRoot { get; set; } = "images/default.png";
-    public string? ProductName { get; set; }
-    public double? ProductPrice { get; set; }
+    private string DialogText { get; set; } = "Информация о продукте";
+    private string ImageRoot { get; set; } = "images/default.png";
+    private string? ProductName { get; set; }
+    private double? ProductPrice { get; set; }
 
 
     protected override async Task OnInitializedAsync()

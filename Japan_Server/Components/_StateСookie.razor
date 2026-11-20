@@ -8,52 +8,48 @@
 @code {
     [Parameter]
     public RenderFragment? ChildContent { get; set; }
-    internal const string StateKeyNamePrice = "SumPrice";
-    internal const string StateKeyNameImg = "ImgRoot";
+    internal const string StateKeyNameBasket = "Basket";
     private string _imgRoot = "images/default.png";
-    // надо делать список и передавать список, так как в корзине может быть несколько обектов
-    public string ImgRoot
-    {
-        get => _imgRoot;
-        set
-        {
-            _imgRoot = value;
-            SaveStateImg();
-        }
-    }
-
-    private void SaveStateImg()
-    {
-        var date = _imgRoot;
-        LocalStorageService.SetStringAsync(StateKeyNameImg, date.ToString());
-    }
-
     private double _sumPrice;
-    public double SumPrice
+    List<Basket>? _baskets;
+
+    public void AddBasket(Basket basket)
     {
-        get => _sumPrice;
-        set
-        {
-            _sumPrice = value;
-            StateHasChanged();
-            SaveStatePrice();
-        }
+        _baskets.Add(basket);
+        var json = JsonSerializer.Serialize(_baskets);
+        LocalStorageService.SetStringAsync(StateKeyNameBasket, json);
+        StateHasChanged();
     }
 
-    private void SaveStatePrice()
+    public void RemoveBasket(Basket basket)
     {
-        var date = _sumPrice;
-        LocalStorageService.SetStringAsync(StateKeyNamePrice, date.ToString());
+
+        var json = JsonSerializer.Serialize(_baskets);
+        LocalStorageService.SetStringAsync(StateKeyNameBasket, json);
+    }
+
+    public List<Basket> GeBbaskets()
+    {
+        return _baskets ?? new();
+    }
+
+    public double SumPrice()
+    {
+        if (_baskets != null)
+        {
+            _sumPrice = _baskets.Sum(x => x.ProductPrice);
+            return _sumPrice;
+        }
+        return 0d;
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        var statePrice = await LocalStorageService.GetStringAsync(StateKeyNamePrice);
-        var stateImg = await LocalStorageService.GetStringAsync(StateKeyNameImg);
-        if (statePrice != null)
+        var stateBasket = await LocalStorageService.GetStringAsync(StateKeyNameBasket);
+        _baskets = JsonSerializer.Deserialize<List<Basket>>(stateBasket) ?? new();
+        if (_baskets != null)
         {
-            _sumPrice = Convert.ToDouble(statePrice);
-            _imgRoot = stateImg;
+            _sumPrice = _baskets.Sum(x => x.ProductPrice);
             StateHasChanged();
         }
     }
