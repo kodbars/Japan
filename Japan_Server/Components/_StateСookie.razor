@@ -11,13 +11,22 @@
     internal const string StateKeyNameBasket = "Basket";
     private string _imgRoot = "images/default.png";
     private double _sumPrice;
-    List<Basket>? _baskets;
+    private List<Basket> _baskets = new();
 
-    public void AddBasket(Basket basket)
+    public async Task AddBasketAsync(Basket basket)
     {
-        _baskets.Add(basket);
-        var json = JsonSerializer.Serialize(_baskets);
-        LocalStorageService.SetStringAsync(StateKeyNameBasket, json);
+        var basketIndex = _baskets.FindIndex(x => x.SkyID == basket.SkyID);
+        if (basketIndex != -1)
+        {
+            _baskets[basketIndex].Amount += 1;
+            var json = JsonSerializer.Serialize(_baskets);
+            await LocalStorageService.SetStringAsync(StateKeyNameBasket, json);
+        } else
+        {
+            _baskets.Add(basket);
+            var json = JsonSerializer.Serialize(_baskets);
+            await LocalStorageService.SetStringAsync(StateKeyNameBasket, json);
+        }
         StateHasChanged();
     }
 
@@ -37,7 +46,7 @@
     {
         if (_baskets != null)
         {
-            _sumPrice = _baskets.Sum(x => x.ProductPrice);
+            _sumPrice = _baskets.Sum(x => x.ProductPrice*x.Amount);
             return _sumPrice;
         }
         return 0d;
@@ -45,10 +54,16 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        var stateBasket = await LocalStorageService.GetStringAsync(StateKeyNameBasket);
-        _baskets = JsonSerializer.Deserialize<List<Basket>>(stateBasket) ?? new();
-        if (_baskets != null)
+        if (firstRender)
         {
+            var stateBasket = await LocalStorageService.GetStringAsync(StateKeyNameBasket);
+            if (!string.IsNullOrEmpty(stateBasket))
+            {
+                _baskets = JsonSerializer.Deserialize<List<Basket>>(stateBasket) ?? new();
+            } else
+            {
+                _baskets = new List<Basket>();
+            }
             _sumPrice = _baskets.Sum(x => x.ProductPrice);
             StateHasChanged();
         }

@@ -44,37 +44,40 @@
 @code {
     [CascadingParameter]
     private IMudDialogInstance MudDialog { get; set; }
+    private string _skyID { get; set; }
     private string _dialogText { get; set; }
     private double _productPrice { get; set; }
     private string? _imageRoot { get; set; }
     private string? _productName { get; set; }
 
     [CascadingParameter]
-    public _StateСookie stateСookie { get; set; } = null!;
+    public _StateСookie _stateCookie { get; set; } = null!;
 
     [Parameter]
     public Item? Item { get; set; }
 
     private void Submit() => MudDialog.Close(DialogResult.Ok(true));
 
-    private void AddBasket()
+    private async Task AddBasket()
     {
         var basket = new Basket()
         {
+            SkyID = _skyID,
             ImageRoot = _imageRoot,
             ProductName = _productName,
-            ProductPrice = _productPrice,
-            Amount = 1
+            ProductPrice = _productPrice
         };
-        stateСookie.AddBasket(basket);
+        await _stateCookie.AddBasketAsync(basket);
     }
 
     protected override async Task OnInitializedAsync()
     {
+
+        _skyID = Item.sku;
         _productName = Item.name;
         _dialogText = Item.description;
         _imageRoot = Item.itemSizes[0].buttonImageUrl;
-        _productPrice = (double) Item.itemSizes[0].prices[0]?.price;
+        _productPrice = (double)Item.itemSizes[0].prices[0]?.price;
     }
 
 
