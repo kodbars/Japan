@@ -1,4 +1,5 @@
 ﻿@inject ILocalStorageService LocalStorageService
+
 <MudDialog>
     <TitleContent>
         <div class="dialog-title">
@@ -37,7 +38,6 @@
             </div>
         </div>
     </DialogContent>
-
 </MudDialog>
 
 
@@ -60,7 +60,7 @@
 
     private async Task AddBasket()
     {
-        var basket = new Basket()
+        var basket = new BasketModels()
         {
             SkyID = _skyID,
             ImageRoot = _imageRoot,

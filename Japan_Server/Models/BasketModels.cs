@@ -1,6 +1,6 @@
 ﻿namespace Japan_Server.Models
 {
-    public class Basket
+    public class BasketModels
     {
         public string? SkyID { get; set; }
         public string? ImageRoot { get; set; }
