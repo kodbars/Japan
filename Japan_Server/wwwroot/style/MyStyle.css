@@ -90,3 +90,7 @@
         color: #BDBDBD !important; /* Цвет при наведении */
         cursor: pointer;
     }
+
+.footer-wrapper {
+    margin-top: 40px;
+}
