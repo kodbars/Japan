@@ -1,0 +1,69 @@
+﻿<MudPaper Class="basket-item" Elevation="0">
+
+    @* Верхняя часть *@
+    <div class="basket-item-header">
+
+        <MudImage Src="@product.ImageRoot"
+                  Width="60"
+                  Height="60"
+                  Class="basket-item-image" />
+
+        <div class="basket-item-info">
+            <MudText Typo="Typo.subtitle1" Class="basket-item-name">
+                @product.ProductName
+            </MudText>
+        </div>
+
+        <MudIconButton Icon="@Icons.Material.Filled.Close"
+                       Size="Size.Small"
+                       OnClick="Test" /> @*RemoveItem*@
+
+    </div>
+
+    <MudDivider Class="basket-divider" />
+
+    @* Нижняя часть *@
+    <div class="basket-item-footer">
+
+        <MudText Typo="Typo.subtitle1" Class="basket-item-price">
+            @product.ProductPrice ₽
+        </MudText>
+
+        <div class="basket-item-actions">
+
+            <MudButton Color="Color.Warning"
+                       Variant="Variant.Text"
+                       OnClick="Test"> @*EditItem*@
+                Изменить
+            </MudButton>
+
+            <div class="quantity-control">
+
+                <MudIconButton Icon="@Icons.Material.Filled.Remove"
+                               Size="Size.Small"
+                               OnClick="@Test" /> @*Decrease*@
+
+                <MudText Typo="Typo.body1">
+                    @product.Amount
+                </MudText>
+
+                <MudIconButton Icon="@Icons.Material.Filled.Add"
+                               Size="Size.Small"
+                               OnClick="Test" /> @*Increase*@
+
+            </div>
+
+        </div>
+
+    </div>
+
+</MudPaper>
+
+@code {
+    [Parameter] public BasketModels product { get; set; } = new();
+    [CascadingParameter]
+    public _StateСookie stateСookie { get; set; } = null!;
+
+    private void Test() { }
+   
+}

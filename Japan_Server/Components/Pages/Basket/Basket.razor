@@ -13,9 +13,12 @@
                        OnClick="@(() => OpenChanged.InvokeAsync(false))"
                        Color="Color.Default"
                        Size="Size.Medium" />
-        @*<MudNavLink OnClick="_ => _open = false">Close Drawer</MudNavLink>*@
     </MudNavMenu>
-</MudDrawer>
+    @foreach (var item in stateСookie.GeBbaskets())
+    {
+        <BasketItem Product="@item"></BasketItem>
+    }
+    </MudDrawer>
 
 @code {
     [Parameter]

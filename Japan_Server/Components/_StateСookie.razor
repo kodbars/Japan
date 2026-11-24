@@ -30,7 +30,20 @@
         StateHasChanged();
     }
 
-    public void RemoveBasket(Basket basket)
+    public async Task<bool> AmountDecrease(BasketModels basket)
+    {
+        if (basket.Amount - 1 < 1)
+        {
+            basket.Amount -= 1;
+            StateHasChanged();
+            return false;
+        }
+        basket.Amount -= 1;
+        StateHasChanged();
+        return true;
+    }
+
+    public void RemoveBasket(BasketModels basket)
     {
 
         var json = JsonSerializer.Serialize(_baskets);
