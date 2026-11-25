@@ -30,24 +30,50 @@
         StateHasChanged();
     }
 
-    public async Task<bool> AmountDecrease(BasketModels basket)
+    public async Task<BasketModels> AmountDecrease(BasketModels basket)
     {
-        if (basket.Amount - 1 < 1)
+        var basketIndex = _baskets.FindIndex(x => x.SkyID == basket.SkyID);
+        if (basketIndex != -1)
         {
-            basket.Amount -= 1;
+            if (_baskets[basketIndex].Amount - 1 < 1)
+            {
+                RemoveBasket(_baskets[basketIndex]);
+                return null;
+            }
+            _baskets[basketIndex].Amount -= 1;
+            var json = JsonSerializer.Serialize(_baskets);
+            await LocalStorageService.SetStringAsync(StateKeyNameBasket, json);
             StateHasChanged();
-            return false;
+            return _baskets[basketIndex];
         }
-        basket.Amount -= 1;
-        StateHasChanged();
-        return true;
+        return null;
     }
+
+    public async Task<BasketModels> AmountIncrease(BasketModels basket)
+    {
+        var basketIndex = _baskets.FindIndex(x => x.SkyID == basket.SkyID);
+        if (basketIndex != -1)
+        {
+            _baskets[basketIndex].Amount += 1;
+            var json = JsonSerializer.Serialize(_baskets);
+            await LocalStorageService.SetStringAsync(StateKeyNameBasket, json);
+            StateHasChanged();
+            return _baskets[basketIndex];
+        }
+        return null;
+    }
+
 
     public void RemoveBasket(BasketModels basket)
     {
-
-        var json = JsonSerializer.Serialize(_baskets);
-        LocalStorageService.SetStringAsync(StateKeyNameBasket, json);
+        int indexBasket = _baskets.FindIndex(x => x.Amount.Equals(basket.Amount));
+        if (indexBasket != 0)
+        {
+            _baskets.RemoveAt(indexBasket);
+            var json = JsonSerializer.Serialize(_baskets);
+            LocalStorageService.SetStringAsync(StateKeyNameBasket, json);
+            StateHasChanged();
+        }
     }
 
     public List<BasketModels> GeBbaskets()

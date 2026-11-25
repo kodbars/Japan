@@ -41,7 +41,7 @@
 
                 <MudIconButton Icon="@Icons.Material.Filled.Remove"
                                Size="Size.Small"
-                               OnClick="@Test" /> @*Decrease*@
+                               OnClick="AmountDecrease" /> @*Decrease*@
 
                 <MudText Typo="Typo.body1">
                     @product.Amount
@@ -49,7 +49,7 @@
 
                 <MudIconButton Icon="@Icons.Material.Filled.Add"
                                Size="Size.Small"
-                               OnClick="Test" /> @*Increase*@
+                               OnClick="AmountIncrease" /> @*Increase*@
 
             </div>
 
@@ -64,6 +64,8 @@
     [CascadingParameter]
     public _StateСookie stateСookie { get; set; } = null!;
 
-    private void Test() { }
-   
+    private async Task Test() {}
+    private async Task AmountDecrease() { product = await stateСookie.AmountDecrease(product); }
+    private async Task AmountIncrease() { product = await stateСookie.AmountIncrease(product); }
+
 }
