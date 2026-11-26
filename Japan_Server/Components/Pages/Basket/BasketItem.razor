@@ -3,20 +3,20 @@
     @* Верхняя часть *@
     <div class="basket-item-header">
 
-        <MudImage Src="@product.ImageRoot"
+        <MudImage Src="@Product.ImageRoot"
                   Width="60"
                   Height="60"
                   Class="basket-item-image" />
 
         <div class="basket-item-info">
             <MudText Typo="Typo.subtitle1" Class="basket-item-name">
-                @product.ProductName
+                @Product.ProductName
             </MudText>
         </div>
 
         <MudIconButton Icon="@Icons.Material.Filled.Close"
                        Size="Size.Small"
-                       OnClick="Test" /> @*RemoveItem*@
+                       OnClick="RemoveItem" /> @*RemoveItem*@
 
     </div>
 
@@ -26,7 +26,7 @@
     <div class="basket-item-footer">
 
         <MudText Typo="Typo.subtitle1" Class="basket-item-price">
-            @product.ProductPrice ₽
+            @Product.ProductPrice ₽
         </MudText>
 
         <div class="basket-item-actions">
@@ -44,7 +44,7 @@
                                OnClick="AmountDecrease" /> @*Decrease*@
 
                 <MudText Typo="Typo.body1">
-                    @product.Amount
+                    @Product.Amount
                 </MudText>
 
                 <MudIconButton Icon="@Icons.Material.Filled.Add"
@@ -60,12 +60,13 @@
 </MudPaper>
 
 @code {
-    [Parameter] public BasketModels product { get; set; } = new();
+    [Parameter] public BasketModels Product { get; set; } = new();
     [CascadingParameter]
-    public _StateСookie stateСookie { get; set; } = null!;
+    public _StateСookie StateСookie { get; set; } = null!;
 
     private async Task Test() {}
-    private async Task AmountDecrease() { product = await stateСookie.AmountDecrease(product); }
-    private async Task AmountIncrease() { product = await stateСookie.AmountIncrease(product); }
+    private async Task AmountDecrease() { await StateСookie.AmountDecreaseAsync(Product); }
+    private async Task AmountIncrease() { await StateСookie.AmountIncreaseAsync(Product); }
+    private async Task RemoveItem() { await StateСookie.RemoveBasketAsync(Product); }
 
 }

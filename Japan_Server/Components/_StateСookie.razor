@@ -10,7 +10,6 @@
     public RenderFragment? ChildContent { get; set; }
     internal const string StateKeyNameBasket = "Basket";
     private string _imgRoot = "images/default.png";
-    private double _sumPrice;
     private List<BasketModels> _baskets = new();
 
     public async Task AddBasketAsync(BasketModels basket)
@@ -19,64 +18,56 @@
         if (basketIndex != -1)
         {
             _baskets[basketIndex].Amount += 1;
-            var json = JsonSerializer.Serialize(_baskets);
-            await LocalStorageService.SetStringAsync(StateKeyNameBasket, json);
-        } else
+            await SaveBasketAsync();
+        }
+        else
         {
             _baskets.Add(basket);
-            var json = JsonSerializer.Serialize(_baskets);
-            await LocalStorageService.SetStringAsync(StateKeyNameBasket, json);
+            await SaveBasketAsync();
         }
         StateHasChanged();
     }
 
-    public async Task<BasketModels> AmountDecrease(BasketModels basket)
+    public async Task AmountDecreaseAsync(BasketModels basket)
     {
         var basketIndex = _baskets.FindIndex(x => x.SkyID == basket.SkyID);
-        if (basketIndex != -1)
+        if (basketIndex >= 0)
         {
             if (_baskets[basketIndex].Amount - 1 < 1)
             {
-                RemoveBasket(_baskets[basketIndex]);
-                return null;
+                await RemoveBasketAsync(_baskets[basketIndex]);
+                return;
             }
-            _baskets[basketIndex].Amount -= 1;
-            var json = JsonSerializer.Serialize(_baskets);
-            await LocalStorageService.SetStringAsync(StateKeyNameBasket, json);
+            _baskets[basketIndex].Amount--;
+            await SaveBasketAsync();
             StateHasChanged();
-            return _baskets[basketIndex];
         }
-        return null;
     }
 
-    public async Task<BasketModels> AmountIncrease(BasketModels basket)
+    public async Task AmountIncreaseAsync(BasketModels basket)
     {
         var basketIndex = _baskets.FindIndex(x => x.SkyID == basket.SkyID);
         if (basketIndex != -1)
         {
-            _baskets[basketIndex].Amount += 1;
-            var json = JsonSerializer.Serialize(_baskets);
-            await LocalStorageService.SetStringAsync(StateKeyNameBasket, json);
+            _baskets[basketIndex].Amount++;
+            await SaveBasketAsync();
             StateHasChanged();
-            return _baskets[basketIndex];
         }
-        return null;
     }
 
 
-    public void RemoveBasket(BasketModels basket)
+    public async Task RemoveBasketAsync(BasketModels basket)
     {
-        int indexBasket = _baskets.FindIndex(x => x.Amount.Equals(basket.Amount));
-        if (indexBasket != 0)
+        int indexBasket = _baskets.FindIndex(x => x.SkyID == basket.SkyID);
+        if (indexBasket >= 0)
         {
             _baskets.RemoveAt(indexBasket);
-            var json = JsonSerializer.Serialize(_baskets);
-            LocalStorageService.SetStringAsync(StateKeyNameBasket, json);
+            await SaveBasketAsync();
             StateHasChanged();
         }
     }
 
-    public List<BasketModels> GeBbaskets()
+    public List<BasketModels> GetBaskets()
     {
         return _baskets ?? new();
     }
@@ -85,8 +76,8 @@
     {
         if (_baskets != null)
         {
-            _sumPrice = _baskets.Sum(x => x.ProductPrice*x.Amount);
-            return _sumPrice;
+            var sumPrice = _baskets.Sum(x => x.ProductPrice * x.Amount);
+            return sumPrice;
         }
         return 0d;
     }
@@ -99,12 +90,18 @@
             if (!string.IsNullOrEmpty(stateBasket))
             {
                 _baskets = JsonSerializer.Deserialize<List<BasketModels>>(stateBasket) ?? new();
-            } else
+            }
+            else
             {
                 _baskets = new List<BasketModels>();
             }
-            _sumPrice = _baskets.Sum(x => x.ProductPrice);
             StateHasChanged();
         }
+    }
+
+    private async Task SaveBasketAsync()
+    {
+        var json = JsonSerializer.Serialize(_baskets);
+        await LocalStorageService.SetStringAsync(StateKeyNameBasket, json);
     }
 }

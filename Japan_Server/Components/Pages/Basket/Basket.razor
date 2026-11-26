@@ -14,9 +14,9 @@
                        Color="Color.Default"
                        Size="Size.Medium" />
     </MudNavMenu>
-    @foreach (var item in stateСookie.GeBbaskets())
+    @foreach (var item in stateСookie.GetBaskets())
     {
-        <BasketItem Product="@item"></BasketItem>
+        <BasketItem @key="item.SkyID" Product="@item"></BasketItem>
     }
     </MudDrawer>
 
