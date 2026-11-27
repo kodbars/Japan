@@ -29,8 +29,8 @@
                    IconSize="@Size.Large"
                    Size="@Size.Large"
                    Color="Color.Warning"
-                   Style="margin-left: auto; margin-right: 100px; border-radius: 20px; height: 50px; margin-top: 25px;"
-                   OnClick="@OnBasketClick">@(stateСookie.SumPrice() == 0.0 ? "Корзина" : stateСookie.SumPrice())</MudButton>
+                   Style="margin-left: auto; margin-right: 100px; border-radius: 20px; height: 50px; width: 200px; min-width: 200px; margin-top: 25px;"
+                   OnClick="@OnBasketClick">@(stateСookie.SumPrice() == 0.0 ? "Корзина" : stateСookie.SumPrice() + " ₽")</MudButton>
     </MudContainer>
 </MudPaper>
 
